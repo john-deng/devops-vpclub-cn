@@ -1,4 +1,10 @@
-# 介绍
+---
+post_title: '测试同步'
+layout: post_type_probably_post
+published: true_or_false
+---
+
+# 测试同步
 
 测试同步
 
