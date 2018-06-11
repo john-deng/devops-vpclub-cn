@@ -2,6 +2,10 @@
 
 测试同步
 
+## 配图
+
+![logo](images/hidevopsio-txt.png)
+
 ## 我是Golang
 
 ```go
