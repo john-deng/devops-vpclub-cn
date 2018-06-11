@@ -1,12 +1,14 @@
 ---
 ID: 2
 post_title: 关于我们
+post_name: sample-page
 author: 冰寒
-post_excerpt: ""
-layout: page
-permalink: https://devops.vpclub.cn/?page_id=2
-published: true
 post_date: 2018-06-10 15:53:38
+layout: page
+link: https://devops.vpclub.cn/?page_id=2
+published: true
+tags: [ ]
+categories: [ ]
 ---
 
 深圳微品致远信息科技有限公司成立于2014年9月16日，公司总部位于高科技公司云集的深圳南山科技园，研发中心设立于武汉光谷，在15个省份设有当地销售及运营团队；是专业的互联网科技公司，其核心股东有中国大地财产保险股份有限公司、深圳远致投资（深圳市国资委投资平台）以及数家上市公司构成。
