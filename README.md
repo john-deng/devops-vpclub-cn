@@ -4,4 +4,4 @@
 
 ## 配图
 
-![logo](images/hidevopsio-txt.png)
+![logo](_posts/images/hidevopsio-txt.png)
