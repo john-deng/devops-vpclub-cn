@@ -10,4 +10,4 @@ published: true
 
 ## 配图
 
-![logo](_posts/images/hidevopsio-txt.png)
+![logo](/images/hidevopsio-txt.png)
