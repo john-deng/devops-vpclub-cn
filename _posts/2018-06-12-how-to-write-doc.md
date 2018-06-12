@@ -1,8 +1,12 @@
 ---
+ID: 67
 post_title: 如何撰写文档
-post_name: 'how-to-write-doc'
+post_name: how-to-write-doc
 author: 冰寒
+post_date: 2018-06-12 17:11:47
 layout: post
+link: >
+  https://devops.vpclub.cn/how-to-write-doc/
 published: true
 tags: [ ]
 categories:
