@@ -1,13 +1,9 @@
 ---
-post_title: 测试同步
-author: John
+post_title: DevOps
+author: John Deng
 layout: post
 published: true
 ---
-# 测试同步
-
-测试同步
-
-## 配图
+# DevOps
 
 ![logo](/images/hidevopsio-txt.png)
