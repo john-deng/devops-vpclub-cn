@@ -5,7 +5,7 @@ post_name: materialis
 author: 冰寒
 post_date: 2018-06-13 13:07:25
 layout: page
-link: https://devops.vpclub.cn/materialis/
+link: https://devops.vpclub.cn/
 published: true
 tags: [ ]
 categories: [ ]
