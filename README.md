@@ -4,6 +4,4 @@ author: John Deng
 layout: post
 published: true
 ---
-# DevOps
-
-![logo](/images/hidevopsio-txt.png)
+# https://devops.vpclub.cn
