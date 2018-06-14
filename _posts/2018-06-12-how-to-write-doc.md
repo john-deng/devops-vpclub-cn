@@ -68,6 +68,8 @@ Markdown是一种轻量级的[标记语言]，它的优点很多，目前也被�
 
 # Mardown 常用语法说明
 
+![logo](/images/md-tutorial/md-icon.png)
+
 ## 标题
 
 标题是每篇文章都需要也是最常用的格式，在Markdown中，如果一段文字被定义为标题，只须在这段文字前加#号即可
@@ -287,12 +289,12 @@ public class HelloWorldApplication {
 * **代码**
 
 ```markdown
-![devops](/images/md-tutorial/devops-digram-1.png)
+![devops](/images/md-tutorial/md-icon.png)
 ```
 
 * **效果**
 
-![devops](/images/md-tutorial/devops-digram-1.png)
+![devops](/images/md-tutorial/md-icon.png)
 
 ## 选项列表
 
