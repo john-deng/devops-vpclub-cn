@@ -2,7 +2,7 @@
 ID: 114
 post_title: 首页
 post_name: home
-author: 冰寒
+author: 邓冰寒
 post_date: 2018-06-13 13:07:25
 layout: page
 link: https://devops.vpclub.cn/
