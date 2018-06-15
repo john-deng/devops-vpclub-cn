@@ -9,7 +9,7 @@ link: >
   https://devops.vpclub.cn/how-to-write-doc/
 published: true
 tags:
-  - "markdown"
+  - markdown
   - doc
   - 文档
 categories:
@@ -55,7 +55,9 @@ post_name: 'hello-world'
 author: 张三
 layout: post
 published: true
-tags: [ 'hello', 'world' ]
+tags:
+  - markdown
+  - doc
 categories:
   - 文档
 ---
