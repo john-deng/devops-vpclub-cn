@@ -1,6 +1,6 @@
 ---
 ID: 2
-post_title: 关于我们
+post_title: 关于
 post_name: sample-page
 author: 冰寒
 post_date: 2018-06-10 15:53:38
