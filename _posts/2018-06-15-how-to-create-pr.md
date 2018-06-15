@@ -3,7 +3,7 @@ ID: 228
 post_title: >
   Github贡献代码及提交PR流程
 post_name: how-to-create-pr
-author: 冰寒
+author: 邓冰寒
 post_date: 2018-06-15 10:00:00
 layout: post
 link: >
