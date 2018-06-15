@@ -12,7 +12,6 @@ tags:
   - "PR"
   - Pull Request
 categories:
-  - 文档
   - 通用
 ---
 
