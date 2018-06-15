@@ -9,7 +9,7 @@ link: >
   https://devops.vpclub.cn/how-to-write-doc/
 published: true
 tags:
-  - markdown
+  - "markdown"
   - doc
   - 文档
 categories:
