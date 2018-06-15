@@ -282,19 +282,19 @@ public class HelloWorldApplication {
 
 * **效果**
 
-点击[微品文档中心](https://devops.vpclub.cn)跳转
+点击[微品DevOps](https://devops.vpclub.cn)跳转
 
 ## 插入图片
 
 * **代码**
 
 ```markdown
-![devops](/images/md-tutorial/md-icon.png)
+![markdown](/images/md-tutorial/markdown.png)
 ```
 
 * **效果**
 
-![devops](/images/md-tutorial/md-icon.png)
+![markdown](/images/md-tutorial/markdown.png)
 
 ## 选项列表
 
