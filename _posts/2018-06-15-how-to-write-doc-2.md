@@ -2,12 +2,12 @@
 ID: 228
 post_title: >
   在Github贡献代码及的提交PR的流程
-post_name: how-to-write-doc-2
+post_name: how-to-create-pr
 author: 冰寒
 post_date: 2018-06-15 10:00:00
 layout: post
 link: >
-  https://devops.vpclub.cn/how-to-write-doc-2/
+  https://devops.vpclub.cn/how-to-create-pr/
 published: true
 tags:
   - "PR"
