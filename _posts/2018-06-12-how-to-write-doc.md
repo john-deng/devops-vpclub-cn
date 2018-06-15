@@ -28,7 +28,7 @@ categories:
 
 ## Fork Git项目
 
-首先是Fork Git项目到你的Github用户下面，写完后提交PR（[Pull Request](https://devops.vpclub.cn/)）
+首先是Fork Git项目到你的Github用户下面，写完后提交PR, 如果你还不清楚如何提交PR，请看这篇文章: [Github贡献代码及提交PR流程](https://devops.vpclub.cn/how-to-create-pr/)
 
 ```bash
 
