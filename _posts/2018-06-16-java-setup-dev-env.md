@@ -17,14 +17,14 @@ categories:
 
 # Java开发环境搭建
 
-俗话说的好，工欲善其事，必先利其器，一个好的工具是Java开发的一大利器，我们选择社区使用最广泛的代码管理工具Git和集成开发工具IDEA IDE。
+俗话说的好，工欲善其事，必先利其器，一个好的工具是Java开发的一大利器，我们选择社区使用最广泛的代码管理工具Git和集成开发工具IDEA IDE。
 
 ## 安装JDK
 
-* [下载 JDK 1.8](https://stage.vpclub.cn/file/jdk/jdk-8u152-windows-x64.exe) （我们采用Spring Boot来开发微服务，JDK最低要求是1.8版本）
-* 安装JDK 安装在安装官方指引安装即可，安装完毕确认以下几点:
+* [下载 JDK 1.8](https://stage.vpclub.cn/file/jdk/jdk-8u152-windows-x64.exe) （我们采用Spring Boot来开发微服务，JDK最低要求是1.8版本）
+* 安装JDK 安装在安装官方指引安装即可，安装完毕确认以下几点:
     * 设置环境变量JAVA_HOME
-    * 在终端下确认Java的版本
+    * 在终端下确认Java的版本
 
 ```bash
 java -version
@@ -36,7 +36,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
 
 ## 安装GIT
   
-* Windows用户选择Windows版本，假设你的Windows是64位的，那么[点击下载 -> Git for Windows SDK](https://stage.vpclub.cn/file/git/git-sdk-installer-1.0.6-64.7z.exe)
+* Windows用户选择Windows版本，假设你的Windows是64位的，那么[点击下载 -> Git for Windows SDK](https://stage.vpclub.cn/file/git/git-sdk-installer-1.0.6-64.7z.exe)
 
     下载好Git后，运行安装包，设置Git安装路径为：C:\git， 等待Git自动安装完毕。
 
@@ -70,26 +70,26 @@ sudo yum -y install git
 ## 安装集成开发环境 IDE
 
 * [下载 IDEA IDE](https://www.jetbrains.com/idea/download)
-  ![downloads](/images/java-setup-dev-env/idea-downloads.png) (要求 IDEA IDE 2016.3.0 或以上版本)
+  ![downloads](/images/java-setup-dev-env/idea-downloads.png) (要求 IDEA IDE 2016.3.0 或以上版本)
 * 安装
 
 IDEA IDE 的安装较为简单，确实安装就行了。
 
 * 配置
   
-IDEA IDE 安装完毕后，你需要配置以下环境，(Windows和Linux用户打开下拉菜单 File -> Settings, Mac 用户打开下拉菜单 IntelliJ IDEA -> Preferences)
+IDEA IDE 安装完毕后，你需要配置以下环境，(Windows和Linux用户打开下拉菜单 File -> Settings, Mac 用户打开下拉菜单 IntelliJ IDEA -> Preferences)
 
-Maven, IDEA IDE安装成功后，已经包含了Maven，可以直接使用，也可以自己[下载 Maven](apache-maven-3.5.2-bin.zip)自定义安装。
+Maven, IDEA IDE安装成功后，已经包含了Maven，可以直接使用，也可以自己[下载 Maven](apache-maven-3.5.2-bin.zip)自定义安装。
 
 ![maven](/images/java-setup-dev-env/idea-maven.png)
 
-安装插件 (**protobuf**和**Lombok** 必须安装)
+安装插件 (**protobuf**和**Lombok** 必须安装)
 
-* 在IDEA系统设置搜索框输入Pluggins打开插件管理
+* 在IDEA系统设置搜索框输入Pluggins打开插件管理
 
 ![plugins](/images/java-setup-dev-env/idea-plugins.png)
 
-* 在IDEA插件管理搜索框输入**protobuf**, 并点击右边的 Install 按钮
+* 在IDEA插件管理搜索框输入**protobuf**, 并点击右边的 Install 按钮
 
 ![protobuf](/images/java-setup-dev-env/idea-protobuf.png)
 
@@ -116,7 +116,7 @@ Default locale: en_US, platform encoding: UTF-8
 OS name: "mac os x", version: "10.12.4", arch: "x86_64", family: "mac"
 ```
 
-那么Maven配置文件的位置在 /usr/local/maven/conf
+那么Maven配置文件的位置在 /usr/local/maven/conf
 
 ```bash
 ls /usr/local/maven/conf
@@ -129,7 +129,7 @@ ls /usr/local/maven/conf
 logging              settings-default.xml settings.xml         toolchains.xml
 ```
 
-从上面输出可以看出maven的配置文件settings.xml在/usr/local/maven/conf/下面
+从上面输出可以看出maven的配置文件settings.xml在/usr/local/maven/conf/下面
 
 ```bash
 # 可选： 如果你没有仓库的账户，下面两项可以不设置
@@ -203,9 +203,9 @@ export MAVEN_SNAPSHOTS_URL=https://nexus.example.com/repository/maven-snapshots/
 
 ## 安装浏览器
 
-* 作为Java开发者，使用什么浏览器能提供你的工作效率呢，我推荐Chrome，或者以Chrome为内核的其它浏览器，用chrome的目的是里面有很多开发用的工具及插件，如Postman。
+* 作为Java开发者，使用什么浏览器能提供你的工作效率呢，我推荐Chrome，或者以Chrome为内核的其它浏览器，用chrome的目的是里面有很多开发用的工具及插件，如Postman。
 
 ## 安装Bash终端
 
-* 如果你是Windows用户，有两个方法来改善用户体验，提升你的工作效率
+* 如果你是Windows用户，有两个方法来改善用户体验，提升你的工作效率
   [下载并安装 ConEmu](https://stage.vpclub.cn/file/conemu/ConEmuSetup.161206.exe), 替代内置终端 cmd.
