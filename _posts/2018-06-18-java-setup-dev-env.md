@@ -29,7 +29,7 @@ java -version
 java version "1.8.0_31"
 Java(TM) SE Runtime Environment (build 1.8.0_31-b13)
 Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
-  ```  
+```  
 
 ## 安装GIT
   
@@ -37,28 +37,32 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
 
     下载好Git后，运行安装包，设置Git安装路径为：C:\git， 等待Git自动安装完毕。
 
-  * Mac用户可以使用Homebrew在终端下安装：
+* Mac用户可以使用Homebrew在终端下安装：
 
-    1. 先安装 [Homebrew](http://brew.sh/index_zh-cn.html)
-    ```bash
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    ```
+1. 先安装 [Homebrew](http://brew.sh/index_zh-cn.html)
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-    2. 再安装 git
+2. 再安装 git
 
-    ```bash
-    brew install git
-    ```
-  * Linux用户：
+```bash
+brew install git
+```
 
-    * Ubuntu:
-    ```bash
-    sudo apt-get install git
-    ```
-    * Fedora:
-    ```bash
-    sudo yum -y install git
-    ```
+* Linux用户：
+
+* Ubuntu:
+
+```bash
+sudo apt-get install git
+```
+
+* Fedora:
+
+```bash
+sudo yum -y install git
+```
 
 ## 安装集成开发环境 IDE
 
@@ -89,7 +93,7 @@ IDEA IDE 安装完毕后，你需要配置以下环境，(Windows和Linux用户
 * 重复上面的步骤，搜索SonarLint、**Lombok**并安装。
 * 安装完毕按提示重启IDEA IDE即可生效。
 
-## 2.1.4 配置Maven仓库
+## 配置Maven仓库
 
 配置Maven仓库为公司私有仓库. 首先查看Maven工具安装路径
 
