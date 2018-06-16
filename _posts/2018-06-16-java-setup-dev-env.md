@@ -70,7 +70,7 @@ sudo yum -y install git
 ## 安装集成开发环境 IDE
 
 * [下载 IDEA IDE](https://www.jetbrains.com/idea/download)
-  ![downloads](/images/java/setup/idea-downloads.png) (要求 IDEA IDE 2016.3.0 或以上版本)
+  ![downloads](/images/java-setup-dev-env/idea-downloads.png) (要求 IDEA IDE 2016.3.0 或以上版本)
 * 安装
 
 IDEA IDE 的安装较为简单，确实安装就行了。
@@ -81,17 +81,17 @@ IDEA IDE 安装完毕后，你需要配置以下环境，(Windows和Linux用户
 
 1. Maven, IDEA IDE安装成功后，已经包含了Maven，可以直接使用，也可以自己[下载 Maven](apache-maven-3.5.2-bin.zip)自定义安装。
 
-![maven](/images/java/setup/idea-maven.png)
+![maven](/images/java-setup-dev-env/idea-maven.png)
 
 1. 安装插件 (**protobuf**和**Lombok** 必须安装)
 
 * 在IDEA系统设置搜索框输入Pluggins打开插件管理
 
-![plugins](/images/java/setup/idea-plugins.png)
+![plugins](/images/java-setup-dev-env/idea-plugins.png)
 
 * 在IDEA插件管理搜索框输入**protobuf**, 并点击右边的 Install 按钮
 
-![protobuf](/images/java/setup/idea-protobuf.png)
+![protobuf](/images/java-setup-dev-env/idea-protobuf.png)
 
 * 重复上面的步骤，搜索SonarLint、**Lombok**并安装。
 * 安装完毕按提示重启IDEA IDE即可生效。
