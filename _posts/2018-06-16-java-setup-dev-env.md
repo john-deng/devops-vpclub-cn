@@ -79,11 +79,11 @@ IDEA IDE 的安装较为简单，确实安装就行了。
   
 IDEA IDE 安装完毕后，你需要配置以下环境，(Windows和Linux用户打开下拉菜单 File -> Settings, Mac 用户打开下拉菜单 IntelliJ IDEA -> Preferences)
 
-1. Maven, IDEA IDE安装成功后，已经包含了Maven，可以直接使用，也可以自己[下载 Maven](apache-maven-3.5.2-bin.zip)自定义安装。
+Maven, IDEA IDE安装成功后，已经包含了Maven，可以直接使用，也可以自己[下载 Maven](apache-maven-3.5.2-bin.zip)自定义安装。
 
 ![maven](/images/java-setup-dev-env/idea-maven.png)
 
-1. 安装插件 (**protobuf**和**Lombok** 必须安装)
+安装插件 (**protobuf**和**Lombok** 必须安装)
 
 * 在IDEA系统设置搜索框输入Pluggins打开插件管理
 
