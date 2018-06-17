@@ -81,17 +81,17 @@ IDEA IDE 安装完毕后，你需要配置以下环境，(Windows和Linux用户�
 
 Maven, IDEA IDE安装成功后，已经包含了Maven，可以直接使用，也可以自己[下载 Maven](apache-maven-3.5.2-bin.zip)自定义安装。
 
-![maven](/images/java-setup-dev-env/idea-maven.png)
+![idea-maven](/images/java-setup-dev-env/idea-maven.png)
 
 安装插件 (**protobuf**和**Lombok** 必须安装)
 
 * 在IDEA系统设置搜索框输入Pluggins打开插件管理
 
-![plugins](/images/java-setup-dev-env/idea-plugins.png)
+![idea-plugins](/images/java-setup-dev-env/idea-plugins.png)
 
 * 在IDEA插件管理搜索框输入**protobuf**, 并点击右边的 Install 按钮
 
-![protobuf](/images/java-setup-dev-env/idea-protobuf.png)
+![idea-protobuf](/images/java-setup-dev-env/idea-protobuf.png)
 
 * 重复上面的步骤，搜索SonarLint、**Lombok**并安装。
 * 安装完毕按提示重启IDEA IDE即可生效。
