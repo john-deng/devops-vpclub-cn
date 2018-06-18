@@ -83,7 +83,7 @@ Markdown是一种轻量级的[标记语言]，它的优点很多，目前也被�
 
 ## Mardown 常用语法说明
 
-![logo](/images/md-tutorial/md-icon.png)
+![logo](/images/general-how-to-write-doc/md-icon.png)
 
 ### 标题
 
@@ -104,7 +104,7 @@ Markdown是一种轻量级的[标记语言]，它的优点很多，目前也被�
 
 * **效果**
 
-![header](/images/md-tutorial/md-header.png)
+![header](/images/general-how-to-write-doc/md-header.png)
 
 以此类推，总共六级标题，必须在##号后加一个空格，这是最标准的Markdown语法。
 
@@ -123,7 +123,7 @@ Markdown是一种轻量级的[标记语言]，它的优点很多，目前也被�
 
 * **效果**
 
-![header](/images/md-tutorial/md-header-2.png)
+![header](/images/general-how-to-write-doc/md-header-2.png)
 
 ### 段落
 
@@ -257,7 +257,7 @@ Markdown是一种轻量级的[标记语言]，它的优点很多，目前也被�
 
 * **Bash 代码块**
 
-![codeblock](/images/md-tutorial/md-codeblock-bash.png)
+![codeblock](/images/general-how-to-write-doc/md-codeblock-bash.png)
 
 * **Bash 代码效果**
 
@@ -269,7 +269,7 @@ find . -name "*.java" | grep hello-world
 
 * **Java 代码块**
 
-![codeblock](/images/md-tutorial/md-codeblock-java.png)
+![codeblock](/images/general-how-to-write-doc/md-codeblock-java.png)
 
 * **Java 代码效果**
 
@@ -304,12 +304,12 @@ public class HelloWorldApplication {
 * **代码**
 
 ```markdown
-![markdown](/images/md-tutorial/markdown.png)
+![markdown](/images/general-how-to-write-doc/markdown.png)
 ```
 
 * **效果**
 
-![markdown](/images/md-tutorial/markdown.png)
+![markdown](/images/general-how-to-write-doc/markdown.png)
 
 ### 选项列表
 

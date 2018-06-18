@@ -26,7 +26,7 @@ Github 是一个家喻户晓的代码托管平台，对于大部分爱好编程�
 * 在浏览器打开https://github.com/john-deng/hello-world
 * 点击 Fork 按钮, 如下图所示
 
-![fork](/images/pull-request/fork.png)
+![fork](/images/general-how-to-create-git-pr/fork.png)
 
 ## 克隆项目到你的电脑
 
@@ -75,10 +75,10 @@ git rebase upstream/master
 
 如你已经完成上述过程，更改并提交了你的更改到你fork的github项目后，接下来就可以创建PR来贡献你的代码到上游项目中了。
 
-![create-pr](/images/pull-request/create-pr.png)
+![create-pr](/images/general-how-to-create-git-pr/create-pr.png)
 
 如上图，点击 Pull Request 链接，跳转到PR提交页面，点击Create pull request 按钮即可。
 
-![create-pr](/images/pull-request/submit-pr.png)
+![create-pr](/images/general-how-to-create-git-pr/submit-pr.png)
 
 恭喜你，你已经完成了提交PR的所有步骤。
