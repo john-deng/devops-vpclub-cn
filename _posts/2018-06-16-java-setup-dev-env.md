@@ -98,7 +98,7 @@ Maven, IDEA IDE安装成功后，已经包含了Maven，可以直接使用，也
 
 ## 配置Maven仓库
 
-配置Maven仓库为公司私有仓库. 首先查看Maven工具安装路径
+配置Maven仓库为公司私有仓库. 首先查看Maven工具安装路径
 
 ```bash
 mvn -v
