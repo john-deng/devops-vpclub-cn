@@ -6,7 +6,7 @@ author: 邓冰寒
 post_date: 2018-06-15 10:00:00
 layout: post
 link: >
-  https://devops.vpclub.cn/how-to-create-pr/
+  https://devops.vpclub.cn/general-how-to-create-git-pr/
 published: true
 tags:
   - "PR"
