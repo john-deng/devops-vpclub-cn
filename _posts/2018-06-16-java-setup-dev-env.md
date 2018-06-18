@@ -17,7 +17,7 @@ categories:
 
 # Java开发环境搭建
 
-俗话说的好，工欲善其事，必先利其器，一个好的工具是Java开发的一大利器，我们选择社区使用最广泛的代码管理工具Git和集成开发工具IDEA IDE。
+俗话说的好，工欲善其事，必先利其器，一个好的工具是Java开发的一大利器，我们选择社区使用最广泛的代码管理工具Git和集成开发工具IDEA IDE。
 
 ## 安装JDK
 
@@ -38,7 +38,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.31-b07, mixed mode)
   
 * Windows用户选择Windows版本，假设你的Windows是64位的，那么[点击下载 -> Git for Windows SDK](https://stage.vpclub.cn/file/git/git-sdk-installer-1.0.6-64.7z.exe)
 
-    下载好Git后，运行安装包，设置Git安装路径为：C:\git， 等待Git自动安装完毕。
+    下载好Git后，运行安装包，设置Git安装路径为：C:\git， 等待Git自动安装完毕。
 
 * Mac用户可以使用Homebrew在终端下安装：
 
