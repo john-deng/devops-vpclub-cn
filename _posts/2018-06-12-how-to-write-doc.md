@@ -1,6 +1,8 @@
 ---
 ID: 67
 post_title: 如何撰写文档
+# post_name：按照本文制订规则，命名规则是 文档类别-文档名称英文名称。
+#   例如，本文档的属于 General -> how-to-write-doc
 post_name: general-how-to-write-doc
 author: 邓冰寒
 post_date: 2018-06-12 17:11:47
@@ -300,6 +302,8 @@ public class HelloWorldApplication {
 点击[微品DevOps](https://devops.vpclub.cn)跳转
 
 ### 插入图片
+
+关于如何插入图片，我们制定一个约束，就是所有图片都放置到文档根目录下的 /images/post_name/ 下面。 例如，以本文档为例，post_name是general-how-to-write-doc，则所有与本文档相关的图片统统放置在 /images/general-how-to-write-doc/ 下面，如下所示，具体的图片路径是：/images/general-how-to-write-doc/markdown.png
 
 * **代码**
 
