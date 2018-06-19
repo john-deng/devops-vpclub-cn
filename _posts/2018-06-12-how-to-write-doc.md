@@ -1,14 +1,10 @@
 ---
 ID: 67
 post_title: 如何撰写文档
-# post_name：按照本文制订规则，命名规则是 文档类别-文档名称英文名称。
-#   例如，本文档的属于 General -> how-to-write-doc
 post_name: general-how-to-write-doc
 author: 邓冰寒
 post_date: 2018-06-12 17:11:47
 layout: post
-link: >
-  https://devops.vpclub.cn/how-to-write-doc/
 published: true
 tags:
   - "markdown"
@@ -30,7 +26,7 @@ categories:
 
 ## Fork Git项目
 
-首先是Fork Git项目到你的Github用户下面，写完后提交PR, 如果你还不清楚如何提交PR，请看这篇文章: [Github贡献代码及提交PR流程](https://devops.vpclub.cn/how-to-create-pr/)
+首先是Fork Git项目到你的Github用户下面，写完后提交PR, 如果你还不清楚如何提交PR，请看这篇文章: [Github贡献代码及提交PR流程](https://devops.vpclub.cn/general-how-to-create-git-pr/)
 
 ```bash
 
@@ -46,14 +42,16 @@ https://github.com/your-name/devops-vpclub-cn.git
 
 ## 创建文件
 
-在_posts目录下面创建文档 yyyy-mm-dd-doc-name.md
+在_posts目录下面创建文档 yyyy-mm-dd-catigory-name.md, **请注意**文件名的命名规则，由日期-类别-文件名组成。
 
 ## 编写YAML格式文件前置属性
 
 ```yaml
 ---
 post_title: 你好，世界
-post_name: 'hello-world'
+# post_name：按照本文制订规则，命名规则是 文档类别-文档名称英文名称。
+#   例如，通用文档下到Hello, World的post name为： general-hello-world
+post_name: 'general-hello-world'
 author: 张三
 layout: post
 published: true
