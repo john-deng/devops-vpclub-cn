@@ -5,6 +5,8 @@ post_name: general-how-to-write-doc
 author: 邓冰寒
 post_date: 2018-06-12 17:11:47
 layout: post
+link: >
+  https://devops.vpclub.cn/general-how-to-write-doc/
 published: true
 tags:
   - "markdown"
