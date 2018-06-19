@@ -49,8 +49,6 @@ https://github.com/your-name/devops-vpclub-cn.git
 ```yaml
 ---
 post_title: 你好，世界
-# post_name：按照本文制订规则，命名规则是 文档类别-文档名称英文名称。
-#   例如，通用文档下到Hello, World的post name为： general-hello-world
 post_name: 'general-hello-world'
 author: 张三
 layout: post
@@ -68,7 +66,7 @@ categories:
 | 属性       | 描述     | 示例       |
 |------------|----------|------------|
 | post_title | 文档标题 | 你好，世界 |
-| post_name | 文档名称，以符号-连接单词| hello-world |
+| post_name | 文档名称，按照本文制订规则，命名规则是 文档类别-文档名称英文名称, 以符号-连接单词| general-hello-world |
 | author | 作者名字 | 张三 |
 | layout | 指定特定的模板文件类型，有 post 和 page 两种 | post |
 | published | 是否发布本文档？ 有 true 和 false | true |
