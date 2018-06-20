@@ -19,17 +19,17 @@ categories:
 
 ## hicicd简介
 
-我们在过去使用的是命令行工具来部署应用，现在改用微信小程序，方便部署。
+我们在过去使用的是命令行工具来部署应用，大部分的业务逻辑写在客户端，现在改用微信小程序作为客户端，服务端部署了hicicd服务，既提高了部署的性能，又方便了部署。
 
-下面让我们来教你如何使用。
+下面让我们来教你如何使用hicicd。
 
 ## 打开微信小程序
 
-你可以直接识别下面二维码
+你可以直接识别下面二维码进入小程序
 
 ![xw-devops](/images/operation-hicicd-user-manual/xw-devops-qrcode.jpg)
 
-进入微信->发现->小程序
+或者进入微信->发现->小程序
 
 ![wechat-sp](/images/operation-hicicd-user-manual/wechat-sp.png)
 
@@ -72,7 +72,7 @@ categories:
 |------------|----------|------------|
 |语言类型|java项目 选择java，cqrs项目 选择java-cqrs，nodejs项目 选择nodejs| java |
 |环境| 选择项目需要部署到哪个环境上面，例如：gitlab上面的demo 如果选择dev，则项目部署到openshift 对应的namespace是demo-dev 依此类推。| dev |
-| 分支| 需要你们部署项目对应的gitlab分支, 有 master 和 development 两个选择，所以，你的项目应用需要推到这两个分支之一才能部署 | master |
+|分支| 需要你们部署项目对应的gitlab分支, 有 master 和 development 两个选择，所以，你的项目应用需要推到这两个分支之一才能部署 | master |
 |版本号 | 部署的版本号, 灰度发布需要使用到的。 这里只需要写大版本即可，注意是小写的v，如 v1 | v1 |
 |服务网格| 是否需要istio监控信息 | 是 |
 |强制构建| 是否强制编译和构建docker镜像|是|
