@@ -1,16 +1,4 @@
 ---
-ID: 266
-post_title: ""
-author: 邓冰寒
-post_date: 2018-06-20 09:45:37
-layout: post
-link: https://devops.vpclub.cn/?p=266
-published: false
-tags: [ ]
-categories:
-  - 文档
----
----
 post_title: hicicd应用部署操作手册
 post_name: operation-hicicd-user-manual
 author: 邓冰寒
