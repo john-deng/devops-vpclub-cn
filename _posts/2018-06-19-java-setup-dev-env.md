@@ -9,7 +9,7 @@ link: >
   https://devops.vpclub.cn/java-setup-dev-env/
 published: true
 tags:
-  - User Menual
+  - Development Environment
 categories:
   - Java
 ---
