@@ -51,7 +51,7 @@ categories:
 
 ## 微服务介绍和发展历程
 
-![svc-history](/images/general-software-architecture/service-revolution.png)
+![svc-history](/images/general-software-architecture/svc-revolution.png)
 
 * 单体服务架构：服务臃肿，业务错综复杂，相互依赖，紧耦合，高风险
 * 面向服务架构：服务拆分，松耦合，服务治理，稳定性提高
