@@ -1,5 +1,6 @@
 ---
-post_title: 软件架构
+ID: 288
+post_title: 软件架构
 post_name: general-software-architecture
 author: 邓冰寒
 post_date: 2018-06-26 10:00:00
