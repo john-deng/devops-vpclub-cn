@@ -64,7 +64,7 @@ categories:
 
 部署非常简单，从列表页面选择进入应用详情，按提示选择相应选项即可。
 
-![select-options](/images/operation-hicicd-user-manual/deploy_project.png)
+![select-options](/images/operation-hicicd-user-manual/deploy-project.png)
 
 
 ### 部署选项详细说明
@@ -73,12 +73,12 @@ categories:
 |------------|----------|------------|
 |语言类型|java项目 选择java，cqrs项目 选择java-cqrs，nodejs项目 选择nodejs| java |
 |环境| 选择项目需要部署到哪个环境上面，例如：gitlab上面的demo 如果选择dev，则项目部署到openshift 对应的namespace是demo-dev 依此类推。| dev |
-|分支| 需要你们部署项目对应的gitlab分支, 有 master 和 development 两个选择，所以，你的项目应用需要推到这两个分支之一才能部署 | master |
+|分支| 部署dev、test环境默认选择的是development分支上的代码，见图描述后面的分支名称development，当需要部署stage、prod则部署的是gitlab上的master分支的代码。 | master |
+|路径| 当前路径是默认配置kong网关地址，如需变化则自行更改。|/namsepace/project|
 |版本号 | 部署的版本号, 灰度发布需要使用到的。 这里只需要写大版本即可，注意是小写的v，如 v1 | v1 |
-|服务网格| 是否需要istio监控信息 | 是 |
-|强制构建| 是否强制编译和构建docker镜像|是|
-|强制部署| 是否强制部署应用 | 是 |
-
+|构建| 是否强制编译和构建docker镜像|是|
+|部署| 是否强制部署应用 | 是 |
+|网关| 是否添加kong网关 | 是 |
 ![confirm](/images/operation-hicicd-user-manual/confirm-deployment.png)
 
 部署中可以到OpenShift控制台查看日志
