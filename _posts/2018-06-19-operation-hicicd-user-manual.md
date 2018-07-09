@@ -43,7 +43,7 @@ categories:
 
 ![console](/images/operation-hicicd-user-manual/xw-home.png)
 
-在菜单项选择控制台
+在菜单项选择控制台,如果需要部署dev、test环境，则选择控制台下的 开发/测试，如果需要部署stage、prod环境，则需要部署控制台下面的预言环境/生产环境
 
 ![menu](/images/operation-hicicd-user-manual/xw-menu.png)
 
@@ -64,7 +64,8 @@ categories:
 
 部署非常简单，从列表页面选择进入应用详情，按提示选择相应选项即可。
 
-![select-options](/images/operation-hicicd-user-manual/project-details.png)
+![select-options](/images/operation-hicicd-user-manual/deploy_project.png)
+
 
 ### 部署选项详细说明
 
@@ -95,5 +96,11 @@ categories:
 到这里我们的应用就部署成功了，构建Java应用大概需要一分钟左右。
 
 ![build-time](/images/operation-hicicd-user-manual/build-result.png)
+
+### 注意事项
+1. 部署dev、test环境默认选择的是development分支上的代码，见图描述后面的分支名称development，当需要部署stage、prod则部署的是gitlab上的master分支的代码。
+2. 路径 当前路径是默认配置kong网关地址，如需变化则自行更改。
+3. 如果更新了代码，则必须选择构建和部署。
+4. 首次部署项目时，若没有网关则需选择网关选项，若存在反之不选择。
 
 如果你对本应用有任何疑问或建议，请在下方留言，谢谢！
