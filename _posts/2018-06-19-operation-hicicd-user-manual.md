@@ -65,7 +65,7 @@ categories:
 
 ## 部署方法
 
-部署非常简单，从列表页面选择进入应用详情，按提示选择相应选项即可。
+部署非常简单，从列表页面选择进入应用详情，按提示选择相应选项即可。
 
 ![select-options](/images/operation-hicicd-user-manual/deploy-project.png)
 
@@ -98,8 +98,8 @@ categories:
 
 ![app-log](/images/operation-hicicd-user-manual/app-log.png)
 
-到这里我们的应用就部署成功了，构建Java应用大概需要一分钟左右。
+到这里我们的应用就部署成功了，构建Java应用大概需要一分钟左右。
 
 ![build-time](/images/operation-hicicd-user-manual/build-result.png)
 
-如果你对本应用有任何疑问或建议，请在下方留言，谢谢！
+如果你对本应用有任何疑问或建议，请在下方留言，谢谢！
