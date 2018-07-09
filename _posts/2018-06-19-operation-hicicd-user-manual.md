@@ -77,8 +77,8 @@ categories:
 |路径| 当前路径是默认配置kong网关地址，如需变化则自行更改。|/namsepace/project|
 |版本号 | 部署的版本号, 灰度发布需要使用到的。 这里只需要写大版本即可，注意是小写的v，如 v1 | v1 |
 |构建| 是否强制编译和构建docker镜像|是|
-|部署| 是否强制部署应用 | 是 |
-|网关| 是否添加kong网关 | 是 |
+|部署| 是否强制部署应用 如果更新了代码，则必须选择构建和部署。 | 是 |
+|网关| 是否添加kong网关，首次部署项目时，若没有网关则需选择网关选项，若存在反之不选择。 | 是 |
 ![confirm](/images/operation-hicicd-user-manual/confirm-deployment.png)
 
 部署中可以到OpenShift控制台查看日志
@@ -96,11 +96,5 @@ categories:
 到这里我们的应用就部署成功了，构建Java应用大概需要一分钟左右。
 
 ![build-time](/images/operation-hicicd-user-manual/build-result.png)
-
-### 注意事项
-1. 部署dev、test环境默认选择的是development分支上的代码，见图描述后面的分支名称development，当需要部署stage、prod则部署的是gitlab上的master分支的代码。
-2. 路径 当前路径是默认配置kong网关地址，如需变化则自行更改。
-3. 如果更新了代码，则必须选择构建和部署。
-4. 首次部署项目时，若没有网关则需选择网关选项，若存在反之不选择。
 
 如果你对本应用有任何疑问或建议，请在下方留言，谢谢！
