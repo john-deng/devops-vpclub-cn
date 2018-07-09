@@ -15,17 +15,17 @@ categories:
 ---
 # hicicd应用部署操作手册
 
->通过运维开发团队的努力，我们的CI/CD自动化部署应用hicicd今天上线运行啦，我们将以往需要手动操作到部分尽量交给机器去执行，以提升工作效率。目前发布的是第一个版本。如果你在使用过程中遇到任何问题，请在下面留言（留言支持使用markdown语法），我们会在第一时间去完善。
+>通过运维开发团队的努力，我们的CI/CD自动化部署应用hicicd今天上线运行啦，我们将以往需要手动操作到部分尽量交给机器去执行，以提升工作效率。目前发布的是第一个版本。如果你在使用过程中遇到任何问题，请在下面留言（留言支持使用markdown语法），我们会在第一时间去完善。
 
-## hicicd简介
+## hicicd简介
 
 我们在过去使用的是命令行工具来部署应用，大部分的业务逻辑写在客户端，现在改用微信小程序作为客户端，服务端部署了hicicd服务，既提高了部署的性能，又方便了部署。
 
-下面让我们来教你如何使用hicicd。
+下面让我们来教你如何使用hicicd。
 
 ## 打开微信小程序
 
-你可以直接识别下面二维码进入小程序
+你可以直接识别下面二维码进入小程序
 
 ![xw-devops](/images/operation-hicicd-user-manual/xw-devops-qrcode.jpg)
 
@@ -33,7 +33,7 @@ categories:
 
 ![wechat-sp](/images/operation-hicicd-user-manual/wechat-sp.png)
 
-搜索“小微DevOps”
+搜索“小微DevOps”
 
 ![serch-xw](/images/operation-hicicd-user-manual/search-xw.png)
 
@@ -51,12 +51,14 @@ categories:
 
 ![login](/images/operation-hicicd-user-manual/login.png)
 
-## 项目应用列表
+## 项目应用列表
+
 
 选择你需要部署的项目
 ![list-project](/images/operation-hicicd-user-manual/project-list.png)
 
 或者使用搜索来找到你的项目
+
 
 ![search-project](/images/operation-hicicd-user-manual/search.png)
 
@@ -79,6 +81,8 @@ categories:
 |构建| 是否强制编译和构建docker镜像|是|
 |部署| 是否强制部署应用 如果更新了代码，则必须选择构建和部署。 | 是 |
 |网关| 是否添加kong网关，首次部署项目时，若没有网关则需选择网关选项，若存在反之不选择。 | 是 |
+
+
 ![confirm](/images/operation-hicicd-user-manual/confirm-deployment.png)
 
 部署中可以到OpenShift控制台查看日志
