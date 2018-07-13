@@ -61,10 +61,11 @@ categories:
 })(document, window);
 ```
 使用方法：
-> 1. 将以上文件引入到项目中
-> 2. 写css的时候用设计图的px尺寸/100。  
+
+1. 将以上文件引入到项目中
+2. 写css的时候用设计图的px尺寸/100。  
     这里是以设计稿为750x1334为例，例如设计稿中元素宽度为100，书写样式的时候就是`width: 1rem`。
-> 3. 当然也可以用postcss来做。
+3. 当然也可以用postcss来做。
 
 ## vm+rem+scss+postcss。
 这种方式同样是采用rem的方式，区别第一种是根元素`font-size`采用`vw`。
@@ -97,17 +98,19 @@ body {
     margin: 0 auto;
 }
 ```
+
 使用方法：
-> 1. 引入`rem.scss`
-> 2. `npm i postcss-pxtorem -D`
-> 3. 修改`.postcssrc.js`文件，这样就可以愉快的用`px`啦。
+
+1. 引入`rem.scss`
+2. `npm i postcss-pxtorem -D`
+3. 修改`.postcssrc.js`文件，这样就可以愉快的用`px`啦。
 
 ```javascript
    module.exports = {
       "plugins": {
           "postcss-pxtorem": {
                 "rootValue": 75,
-                "propList": ["*"]   
+                "propList": ["*"]
             }
        }
    }
