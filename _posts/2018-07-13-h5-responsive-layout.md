@@ -2,7 +2,7 @@
 ID: 300
 post_title: 聊聊H5移动端适配方案
 post_name: h5-responsive-layout
-author: 邓冰寒
+author: 盛闯
 post_date: 2018-07-13 10:44:49
 layout: post
 link: >
@@ -16,7 +16,6 @@ tags:
 categories:
   - 前端
 ---
-
 
 # 聊聊H5适配
 
