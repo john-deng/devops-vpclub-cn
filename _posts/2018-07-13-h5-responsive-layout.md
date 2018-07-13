@@ -101,15 +101,17 @@ body {
 > 1. 引入`rem.scss`
 > 2. `npm i postcss-pxtorem -D`
 > 3. 修改`.postcssrc.js`文件，这样就可以愉快的用`px`啦。
-> ```javascript
->   module.exports = {
->      "plugins": {
->          "postcss-pxtorem": {
->                "rootValue": 75,
->                "propList": ["*"]   
->            }
->       }
->   }
+
+```javascript
+   module.exports = {
+      "plugins": {
+          "postcss-pxtorem": {
+                "rootValue": 75,
+                "propList": ["*"]   
+            }
+       }
+   }
+```
 
 - 注意：不支持style中使用@import url()的方式。这种时候可以用定义的scss函数`rem()`  
 - 优点：只需要通过改变根元素大小的计算方式，就可以无缝过渡到另一种CSS单位
