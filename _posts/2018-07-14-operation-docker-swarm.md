@@ -63,7 +63,7 @@ Docker引擎CLI包含Swarm集群管理指令，如增加或删除节点。CLI也
 
 ### 方案描述
 
-> 方案描述摘自docker官方文档 https://docs.docker.com/engine/swarm/
+> 方案描述参考 [docker官方文档](https://docs.docker.com/engine/swarm/)
 
 本方案集群管理与Docker引擎相结合，使用Docker引擎命令行客户端便可创建一个Docker引擎的Swarm，在这个集群中进行应用服务的部署。对于Swarm集群的创建和管理，无需其他额外的编排软件
 
