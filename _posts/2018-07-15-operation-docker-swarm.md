@@ -1,16 +1,18 @@
 ---
+ID: 307
 post_title: 小型项目的容器部署方案
 post_name: operation-docker-swarm
 author: 邓冰寒
+post_date: 2018-07-15 13:19:58
 layout: post
 link: >
   https://devops.vpclub.cn/operation-docker-swarm/
 published: true
 tags:
-  - Docker
-  - Swarm
   - Deployment
+  - Docker
   - Simplified
+  - Swarm
 categories:
   - 运维
 ---
