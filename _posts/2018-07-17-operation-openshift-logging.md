@@ -1,14 +1,16 @@
 ---
+ID: 309
 post_title: 如何在OpenShift查看应用日志
 post_name: operation-openshift-logging
 author: 邓冰寒
+post_date: 2018-07-17 20:11:11
 layout: post
 link: >
   https://devops.vpclub.cn/operation-openshift-logging/
 published: true
 tags:
-  - OpenShift
   - Loging
+  - OpenShift
   - 日志
 categories:
   - 运维
