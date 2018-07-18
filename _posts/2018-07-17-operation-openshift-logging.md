@@ -56,7 +56,7 @@ https://{{openshift-web-console}}:8443/
 
 >Only the previous 5000 log lines and new log messages will be displayed because of the large log size.
 
-那么历史日志怎么查看呢？请看下一步
+那么历史日志怎么查看呢？进入Pod页面后选择 Logs -> View Archive:
 
 ![view-archive](/images/operation-openshift-logging/view-archive.png)
 
@@ -85,3 +85,15 @@ kubernetes.namespace_name:"moses-prod" AND kubernetes.labels.app:"order-query"
 选择你要查看的时间段
 
 ![abs-log](/images/operation-openshift-logging/historical-abs-log.png)
+
+## 问题及解决办法
+
+如果你打开Kibana后出现错误提示，如下图所示，表示你的浏览器有脏数据，请清除浏览器缓存再次尝试。
+
+![trouble-shot](/images/operation-openshift-logging/trouble-shot.png)
+
+如果清除浏览器缓存？我们以Chrome为例
+
+![clear-browsing-data](/images/operation-openshift-logging/clear-browsing-data.png)
+
+![clear-browsing-data-confirm](/images/operation-openshift-logging/clear-browsing-data-confirm.png)
