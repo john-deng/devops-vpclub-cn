@@ -83,7 +83,7 @@ Markdown是一种轻量级的[标记语言]，它的优点很多，目前也被�
 
 ## Mardown 常用语法说明
 
-![logo](/images/general-how-to-write-doc/md-icon.png)
+![logo-markdown](/images/general-how-to-write-doc/md-icon.png)
 
 ### 标题
 
