@@ -3,8 +3,6 @@ post_title: 如何在CentOS 7 + Nginx 配置支持IPV6
 post_name: operation-cnetos7-nginx-ipv6
 author: 邓冰寒
 layout: post
-link: >
-  https://devops.vpclub.cn/operation-cnetos7-nginx-ipv6/
 published: true
 tags:
   - ipv6
