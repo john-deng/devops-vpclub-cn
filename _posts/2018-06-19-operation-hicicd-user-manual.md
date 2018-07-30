@@ -69,7 +69,6 @@ categories:
 
 ![select-options](/images/operation-hicicd-user-manual/deploy-project.png)
 
-
 ### 部署选项详细说明
 
 | 选项       | 描述     | 示例       |
@@ -82,7 +81,6 @@ categories:
 |构建| 是否强制编译和构建docker镜像|是|
 |部署| 是否强制部署应用 如果更新了代码，则必须选择构建和部署。 | 是 |
 |网关| 是否添加kong网关，首次部署项目时，若没有网关则需选择网关选项，若存在反之不选择。 | 是 |
-
 
 ![confirm](/images/operation-hicicd-user-manual/confirm-deployment.png)
 
