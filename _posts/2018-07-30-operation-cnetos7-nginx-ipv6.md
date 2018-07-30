@@ -1,8 +1,7 @@
 ---
 ID: 317
 post_title: >
-  如何在CentOS 7 + Nginx
-  配置支持IPV6
+  CentOS 7 + Nginx 配置支持IPV6
 post_name: operation-cnetos7-nginx-ipv6
 author: 邓冰寒
 post_date: 2018-07-30 11:13:33
@@ -16,10 +15,10 @@ categories:
   - 运维
 ---
 
-# 如何在CentOS 7 + Nginx 配置支持IPV6
+# CentOS 7 + Nginx 配置支持IPV6
 
-**作者：** 唐小波</br>
-**校对：** 邓冰寒</br>
+**作者：** 唐小波
+**校对：** 邓冰寒
 
 本文档针对局域网网络环境IPV6的支持测试，根据公司业务IPv6改造需求进行渠道运营部IPv6改造计划，作出相对应的内部面向客户互联网系统IPv6改造。
 
@@ -168,21 +167,21 @@ net.ipv6.conf.lo.disable_ipv6 = 0
 
 IPv4 Endpoint填写外网IP地址：
 
-![logo](/images/operation-centos7-nginx-ipv6/md-icon.png)
+![endpoint](/images/operation-centos7-nginx-ipv6/md-icon.png)
 
 选择一个隧道服务器：
 
-![logo](/images/operation-centos7-nginx-ipv6/md-icon-gray.png)
+![sel-tunnel](/images/operation-centos7-nginx-ipv6/md-icon-gray.png)
 
 查看Tunnel信息
 
-![logo](/images/operation-centos7-nginx-ipv6/md-header.png)
+![tnunnel-info](/images/operation-centos7-nginx-ipv6/md-header.png)
 
 Client IPv6 Address 就是你的IPv6 地址，之后解析域名(AAAA解析)的时候用的就是它(域名里不用写“/64”)
 
 配置信息
 
-![logo](/images/operation-centos7-nginx-ipv6/md-header-2.png)
+![conf](/images/operation-centos7-nginx-ipv6/md-header-2.png)
 
 重点：选择IP的方式设置（这里选择的是Linux-route2），然后将文本框中local IP需改成内网IP（这两个IP在阿里云后台都能看到），复制文本框中的内容到CentOS环境下执行。
 
