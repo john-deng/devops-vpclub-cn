@@ -1,25 +1,13 @@
 ---
 ID: 313
-post_title: ""
+post_title: "CentOS 7 + Nginx 配置支持IPV6"
+post_name: operation-centos7-nginx-ipv6
 author: 邓冰寒
 post_date: 2018-07-30 10:49:15
 layout: post
 link: https://devops.vpclub.cn/?p=313
-published: false
-tags: [ ]
-categories:
-  - 文档
----
----
-post_title: CentOS 7 + Nginx 配置支持IPV6
-post_name: centos7-nginx-ipv6
-author: 唐小波
-layout: post
-link: https://devops.vpclub.cn/centos7-nginx-ipv6/
 published: true
-tags:
-  - ipv6
-  - nginx
+tags: ["ipv6"]
 categories:
   - 运维
 ---
