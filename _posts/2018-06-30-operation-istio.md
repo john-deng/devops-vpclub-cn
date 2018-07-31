@@ -221,6 +221,15 @@ openshift v3.9.0
 
 ![istio-proxy](../images/operation-istio/istio-proxy.png)
 
+部署成功后pod启动成功后，
+
+```bash
+# 请求接口
+curl -I http://simple-order-command-demo-dev.app.vpclub.io 
+```
+
+在istio-system就可以看到注入的效果了。
+
 ## istio 组件的作用
 
 在这里istio有很多的组件可以查看你所有pod的各个指标。它包含的组件有 `egressgateway`、 `grafana`、 `ingressgateway`、 `istio-pilot`、 `istio-tracing`、 `jaeger`、 `prometheus`、 `security`、 `servicegraph`、 `sidecarInjectorWebhook`。
@@ -243,5 +252,7 @@ openshift v3.9.0
    各个组件可以清楚的知道服务之间的调用关系.
    servicegraph的router/dotviz
    或者是router/force/forcegraph.html
-   例如：http://servicegraph-istio-system.app.vpclub.io/force/forcegraph.html
-   ![servicegraph](https://blog.openshift.com/wp-content/uploads/servicegraph.png)
+   例如：http://servicegraph-istio-system.app.vpclub.io/force/forcegraph.html,
+   http://servicegraph-istio-system.app.vpclub.io/dotviz
+
+   ![servicegraph](../images/operation-istio/istio-servicegraph-dotviz.png)
