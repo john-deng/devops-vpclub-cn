@@ -1,9 +1,27 @@
+---
+ID: 317
+post_title: 小型项目的容器部署方案
+post_name: operation-istio
+author: 邓冰寒
+post_date: 2018-07-31 13:19:58
+layout: post
+link: >
+  https://devops.vpclub.cn/operation-istio/
+published: true
+tags:
+  - Docker
+  - istio
+  - grafana
+categories:
+  - 运维
+---
+
 # Istio
 
 ## Istio 概述
 
 * `istio有什么特性`
- 
+
  在从单体应用程序向分布式微服务架构的转型过程中，开发人员和运维人员面临诸多挑战，使用Istio可以解决这些问题。术语服务网格（Service Mesh）通常用于描述构成这些应用程序的微服务网络以及它们之间的交互。随着规模和复杂性的增长，服务网格越来越难以理解和管理。它的需求包括服务发现、负载均衡、故障恢复、指标收集和监控以及通常更加复杂的运维需求，例如A/B测试、金丝雀发布、限流、访问控制和端到端认证等。
 
 Istio提供了一个完整的解决方案，通过为整个服务网格提供行为洞察和操作控制来满足微服务应用程序的多样化需求。它在服务网络中统一提供了许多关键功能：
