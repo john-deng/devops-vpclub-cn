@@ -74,6 +74,20 @@ https://{{openshift-web-console}}:8443/
 kubernetes.namespace_name:"moses-prod" AND kubernetes.labels.app:"order-query"
 ```
 
+如果想进一步过滤查询条件，如查询所有 ERROR 级别日志
+
+```browser
+kubernetes.namespace_name:"moses-prod" AND kubernetes.labels.app:"order-query" AND message: *ERROR*
+```
+
+如查询某个id为 100360681064038401 的日志
+
+```browser
+kubernetes.namespace_name:"moses-prod" AND kubernetes.labels.app:"order-query" AND message: *100360681064038401*
+```
+
+>如欲知更高级查询，请查看[官方文档](https://www.elastic.co/guide/en/beats/packetbeat/current/kibana-queries-filters.html)
+
 ![app-log](/images/operation-openshift-logging/app-log.png)
 
 ### 查看历史日志
