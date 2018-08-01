@@ -261,7 +261,7 @@ jaeger 可以查看服务的调用情况调用时长。
 
 ![istio-jaeger](../images/operation-istio/istio-jaeger.png)
 
-![istio-jaeger](../images/operation-istio/istio-default-route.png)
+![istio-jaeger-route](../images/operation-istio/istio-default-route.png)
 
 ### servicegraph
 
@@ -278,4 +278,3 @@ jaeger 可以查看服务的调用情况调用时长。
 ```
 
 ![servicegraph](../images/operation-istio/istio-servicegraph-dotviz.png)
-
