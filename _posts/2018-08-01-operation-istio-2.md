@@ -16,6 +16,8 @@ categories:
 
 # OpenShift 集成 Istio 服务网格
 
+![istio](/images/operation-istio/istio.png)
+
 ## Istio 概述
 
 * `istio有什么特性`
@@ -205,7 +207,7 @@ oc get pod -n istio-system
 
 如图：
 
-![istio-system](../images/operation-istio/istio-system.png)
+![istio-system](/images/operation-istio/istio-system.png)
 
 ### 使用源码安装istio
 
@@ -223,7 +225,7 @@ oc create -f istio.yaml
 
 如果需要在服务中注入sidecar，则我们在部署工具的时候选择`网格`，如下图：
 
-![deploy-system](../images/operation-istio/deploy-system.png)
+![deploy-system](/images/operation-istio/deploy-system.png)
 
 如果你部署的项目是第一次部署则需要加上`构建`和`网关` 。
 
@@ -231,11 +233,11 @@ oc create -f istio.yaml
 
 在我们部署的pod中可以看到`Containers Ready` 2/2 这个时候我们就可以发现多了一个pod，看到这个就可以证明我们在项目中已经注入istio。如下：
 
-![istio-system](../images/operation-istio/istio-product.png)
+![istio-system](/images/operation-istio/istio-product.png)
 
 还有一处不同的是在查看logs的时候多了一处Container 而另外一个pod是`istio-proxy`的logs。
 
-![istio-proxy](../images/operation-istio/istio-proxy.png)
+![istio-proxy](/images/operation-istio/istio-proxy.png)
 
 部署成功后pod启动成功后，
 
@@ -254,15 +256,15 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
 grafana主要的作用是监控到服务器的cpu 、内存、硬盘的各项指标。
 
-![istio-grafana](../images/operation-istio/istio-grafana.png)
+![istio-grafana](/images/operation-istio/istio-grafana.png)
 
 ### jaeger
 
 jaeger 可以查看服务的调用情况调用时长。
 
-![istio-jaeger](../images/operation-istio/istio-jaeger.png)
+![istio-jaeger](/images/operation-istio/istio-jaeger.png)
 
-![istio-jaeger-route](../images/operation-istio/istio-default-route.png)
+![istio-jaeger-route](/images/operation-istio/istio-default-route.png)
 
 ### servicegraph
 
@@ -278,4 +280,4 @@ jaeger 可以查看服务的调用情况调用时长。
    http://servicegraph-istio-system.app.vpclub.io/dotviz
 ```
 
-![servicegraph](../images/operation-istio/istio-servicegraph-dotviz.png)
+![servicegraph](/images/operation-istio/istio-servicegraph-dotviz.png)
