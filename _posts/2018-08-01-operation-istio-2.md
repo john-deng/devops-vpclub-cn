@@ -244,7 +244,7 @@ oc create -f istio.yaml
 
 ## Istio 注入到pod中
 
-如果需要在服务中注入sidecar，则我们在部署工具的时候选择`网格`，如下图：
+如果需要在服务中注入sidecar，则我们在部署的时候选择`网格`，如下图：
 
 ![deploy-system](/images/operation-istio/deploy-system.png)
 
@@ -277,7 +277,7 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
 grafana主要的作用是监控到服务的cpu 、内存、硬盘的各项指标。
 
-![gf-dashboard](/images/operation-istio/istio-grafana-dashboard3.png)
+![gf-dashboard](/images/operation-istio/istio-grafana-dashboard4.png)
 
 我们调用部署好的服务来测试，
 
