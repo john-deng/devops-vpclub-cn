@@ -339,7 +339,7 @@ x-envoy-upstream-service-time: 6
 }
 ```
 
-我们马上可以看到以上调用情况。
+我们马上可以看到以上调用情况。
 
 ![gf-dashboard-svc](/images/operation-istio/istio-grafana-dashboard-svc2.png)
 
