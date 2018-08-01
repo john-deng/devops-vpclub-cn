@@ -358,11 +358,11 @@ jaeger 可以查看服务的调用情况调用时长, 我们可以跟踪服务�
 在浏览器输入以下网站即可查看到服务调用关系图：
 
 ```browser
-   http://servicegraph-istio-system.app.vpclub.io/force/forcegraphhtml,
+http://servicegraph-istio-system.app.vpclub.io/force/forcegraph.html
 ```
 
 ```browser
-   http://servicegraph-istio-system.app.vpclub.io/dotviz
+http://servicegraph-istio-system.app.vpclub.io/dotviz
 ```
 
 ![servicegraph](/images/operation-istio/istio-servicegraph-dotviz.png)
