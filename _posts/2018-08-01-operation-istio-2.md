@@ -258,7 +258,7 @@ oc create -f istio.yaml
 
 还有一处不同的是在查看logs的时候多了一处Container 而另外一个pod是`istio-proxy`的logs。
 
-![istio-proxy](/images/operation-istio/istio-proxy.png)
+![istio-prxy](/images/operation-istio/istio-proxy.png)
 
 部署成功后pod启动成功后，
 
