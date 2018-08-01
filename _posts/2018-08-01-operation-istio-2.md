@@ -246,7 +246,7 @@ oc create -f istio.yaml
 
 如果需要在服务中注入sidecar，则我们在部署的时候选择`网格`，如下图：
 
-![hicicd](/images/operation-istio/hicicd.jpg)
+![hicicd-deploy](/images/operation-istio/hicicd-deploy.jpg)
 
 如果你部署的项目是第一次部署则需要加上`构建`和`网关` 。
 
