@@ -1,34 +1,18 @@
 ---
 ID: 320
-post_title: ""
+post_title: "OpenShift 集成 Istio 服务网格"
+post_name: operation-istio
 author: 邓冰寒
 post_date: 2018-08-01 12:11:43
 layout: post
 link: https://devops.vpclub.cn/?p=320
 published: false
-tags: [ ]
-categories:
-  - 文档
----
----
-ID: 317
-post_title: 小型项目的容器部署方案
-post_name: operation-istio
-author: 邓冰寒
-post_date: 2018-07-31 13:19:58
-layout: post
-link: >
-  https://devops.vpclub.cn/operation-istio/
-published: true
-tags:
-  - Docker
-  - istio
-  - grafana
+tags: ["istio","Service mesh","服务网格"]
 categories:
   - 运维
 ---
 
-# Istio
+# OpenShift 集成 Istio 服务网格
 
 ## Istio 概述
 
@@ -64,7 +48,7 @@ openshift v3.9.0
 
 官网提供了很多种安装istio的方法，但是最方便的、最快捷的方式就只有ansible的方式安装了，我这里提供了两种安装Istio,如果你想使用别的方式安装istio,则进入istio官网:https://istio.io/docs/ 。
 
-1. 使用ansible安装istio
+### 使用ansible安装istio
 
     在使用ansible安装openshift之前，首先需要安装ansible，在这里我提供了ansible的安装方式，如下：
 
@@ -221,7 +205,7 @@ openshift v3.9.0
 
     ![istio-system](../images/operation-istio/istio-system.png)
 
-2. 使用源码安装istio
+### 使用源码安装istio
 
     ```bash
     wget https://github.com/istio/istio/releases/download/0.8.0/istio-0.8.0-linux.tar.gz
@@ -264,13 +248,13 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
 在这里istio有很多的组件可以查看你所有pod的各个指标。它包含的组件有 `egressgateway`、 `grafana`、 `ingressgateway`、 `istio-pilot`、 `istio-tracing`、 `jaeger`、 `prometheus`、 `security`、 `servicegraph`、 `sidecarInjectorWebhook`。
 
-1. grafana
+### grafana
 
     grafana主要的作用是监控到服务器的cpu 、内存、硬盘的各项指标。
 
     ![istio-grafana](../images/operation-istio/istio-grafana.png)
 
-2. jaeger
+### jaeger
 
     jaeger 可以查看服务的调用情况调用时长。
 
@@ -278,11 +262,18 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
     ![istio-jaeger](../images/operation-istio/istio-default-route.png)
 
-3. servicegraph
-   各个组件可以清楚的知道服务之间的调用关系.
-   servicegraph的router/dotviz
-   或者是router/force/forcegraph.html
-   例如：http://servicegraph-istio-system.app.vpclub.io/force/forcegraph.html,
-   http://servicegraph-istio-system.app.vpclub.io/dotviz
+### servicegraph
 
-   ![servicegraph](../images/operation-istio/istio-servicegraph-dotviz.png)
+各个组件可以清楚的知道服务之间的调用关系. servicegraph的router/dotviz, 或者是router/force/forcegraph.html
+
+例如：
+
+```browser
+   http://servicegraph-istio-system.app.vpclub.io/force/forcegraph.html,
+```
+
+```browser
+   http://servicegraph-istio-system.app.vpclub.io/dotviz
+```
+
+![servicegraph](../images/operation-istio/istio-servicegraph-dotviz.png)
