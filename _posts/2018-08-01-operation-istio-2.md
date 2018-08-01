@@ -208,9 +208,27 @@ oc get pod -n istio-system
 
 ```
 
-如图：
+显示结果如下：
 
-![istio-system](/images/operation-istio/istio-system.png)
+```bash
+
+NAME                                        READY     STATUS      RESTARTS   AGE
+grafana-7fd8c57c7c-466b8                    1/1       Running     0          5d
+istio-citadel-ff5696f6f-mnqfm               1/1       Running     0          5d
+istio-cleanup-old-ca-r89qv                  0/1       Completed   0          5d
+istio-egressgateway-58d98d898c-2xv5w        1/1       Running     0          5d
+istio-ingressgateway-6bc7c7c4bc-k6h2r       1/1       Running     0          5d
+istio-mixer-post-install-p8dtx              0/1       Completed   0          5d
+istio-pilot-6c5c6b586c-xqrh7                2/2       Running     0          5d
+istio-policy-5c7fbb4b9f-7qzh2               2/2       Running     0          5d
+istio-sidecar-injector-dbd67c88d-f82n5      1/1       Running     66         5d
+istio-statsd-prom-bridge-6dbb7dcc7f-hlk8r   1/1       Running     0          5d
+istio-telemetry-54b5bf4847-v2v7n            2/2       Running     0          5d
+istio-tracing-67dbb5b89f-bz2p9              1/1       Running     0          5d
+jaeger-6b969bff97-wl9k8                     1/1       Running     0          5d
+prometheus-586d95b8d9-2mq2j                 1/1       Running     0          5d
+servicegraph-6d86dfc6cb-gxg2l               1/1       Running     0          5d
+```
 
 ### 使用源码安装istio
 
@@ -257,13 +275,77 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
 ### grafana
 
-grafana主要的作用是监控到服务器的cpu 、内存、硬盘的各项指标。
+grafana主要的作用是监控到服务的cpu 、内存、硬盘的各项指标。
 
-![istio-grafana](/images/operation-istio/istio-grafana2.png)
+![istio-grafana](/images/operation-istio/istio-grafana-dashboard.png)
+
+我们调用部署好的服务来测试，
+
+```bash
+http --timeout=3600 POST 'http://simple-product-command-demo-dev.app.vpclub.io/product/create' 'name=cqrs test product 1' price=1234 stock=999999
+```
+
+```bash
+HTTP/1.1 200 OK
+Set-Cookie: 898a66e48f7961e706d5eb92f6a7f0af=be9dedeed5fbc99a967ff1efc42256cb; path=/; HttpOnly
+content-type: application/json;charset=UTF-8
+date: Wed, 01 Aug 2018 06:54:59 GMT
+server: envoy
+transfer-encoding: chunked
+x-application-context: simpleproduct-command:web,swagger,locale,logging,axon-amqp,axon-jgroups,axon-eventstore,dev
+x-envoy-decorator-operation: default-route
+x-envoy-upstream-service-time: 25
+
+{
+    "dataInfo": "1024549033106079746",
+    "message": "成功",
+    "returnCode": "1000"
+}
+
+```
+
+```bash
+http --timeout=3600 POST 'http://simple-order-command-demo-dev.app.vpclub.io/order/create' <<-EOF
+{
+  "appId": "1234567890",
+  "username": "johnd",
+  "orderProducts": [
+    {
+      "id": "1024549033106079746",
+      "price": 1234,
+      "amount": 1234,
+      "quantity": 1
+    }
+  ]
+}
+EOF
+```
+
+```bash
+HTTP/1.1 200 OK
+Set-Cookie: 699c548eb83715f4ec377253ae4eb4e4=3c83ed8384777b0cb65a39549f16e37b; path=/; HttpOnly
+content-type: application/json;charset=UTF-8
+date: Wed, 01 Aug 2018 06:56:24 GMT
+server: envoy
+transfer-encoding: chunked
+x-application-context: simpleorder-command:web,swagger,locale,logging,jpa,druid,axon-jgroups,axon-amqp,axon-eventstore,axon-scheduler,axon-saga,dev
+x-envoy-decorator-operation: default-route
+x-envoy-upstream-service-time: 6
+
+{
+    "dataInfo": "1024549390003601409",
+    "message": "成功",
+    "returnCode": "1000"
+}
+```
+
+我们马上可以看到以上调用情况。
+
+![istio-grafana](/images/operation-istio/istio-grafana-dashboard-svc.png)
 
 ### jaeger
 
-jaeger 可以查看服务的调用情况调用时长。
+jaeger 可以查看服务的调用情况调用时长, 我们可以跟踪服务间调用情况。
 
 ![istio-jaeger](/images/operation-istio/istio-jaeger.png)
 
@@ -273,10 +355,10 @@ jaeger 可以查看服务的调用情况调用时长。
 
 各个组件可以清楚的知道服务之间的调用关系. servicegraph的router/dotviz, 或者是router/force/forcegraph.html
 
-例如：
+在浏览器输入以下网站即可查看到服务调用关系图：
 
 ```browser
-   http://servicegraph-istio-system.app.vpclub.io/force/forcegraph.html,
+   http://servicegraph-istio-system.app.vpclub.io/force/forcegraphhtml,
 ```
 
 ```browser
