@@ -1,11 +1,8 @@
 ---
-ID: 320
 post_title: "OpenShift 集成 Istio 服务网格"
 post_name: operation-istio
 author: 邓冰寒
-post_date: 2018-08-01 12:11:43
 layout: post
-link: https://devops.vpclub.cn/?p=320
 published: false
 tags: ["istio","Service mesh","服务网格"]
 categories:
