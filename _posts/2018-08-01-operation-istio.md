@@ -51,172 +51,172 @@ openshift v3.9.0
 
 ### 使用ansible安装istio
 
-    在使用ansible安装openshift之前，首先需要安装ansible，在这里我提供了ansible的安装方式，如下：
+在使用ansible安装openshift之前，首先需要安装ansible，在这里我提供了ansible的安装方式，如下：
 
-    Ansible是用Python开发的，使用ansible需要操作系统有Python，建议Python版本2.6以上。
+Ansible是用Python开发的，使用ansible需要操作系统有Python，建议Python版本2.6以上。
 
-    (1) python2.7安装
+#### python2.7安装
 
-    ```bash
-    # 下载源码包
-    wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
+```bash
+# 下载源码包
+wget https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tgz
 
-    #解压
-    tar xvzf Python-2.7.8.tgz
+#解压
+tar xvzf Python-2.7.8.tgz
 
-    cd Python-2.7.8
+cd Python-2.7.8
 
-    ./configure --prefix=/usr/local
+./configure --prefix=/usr/local
 
-    #安装
-    make
+#安装
+make
 
-    make install
-    ```
+make install
+```
 
-    (2) setuptools模块安装
+#### setuptools模块安装
 
-    ```bash
-    wget https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.tar.gz
+```bash
+wget https://pypi.python.org/packages/source/s/setuptools/setuptools-7.0.tar.gz
 
-    tar xvzf setuptools-7.0.tar.gz
+tar xvzf setuptools-7.0.tar.gz
 
-    cd setuptools-7.0
+cd setuptools-7.0
 
-    python setup.py install
-    ```
+python setup.py install
+```
 
-    安装好setuptools后就可以利用easy_install这个工具安装下面的python模块了，但我的电脑是虚拟机，配置太低了，所以基本无法安装，所以只好一个一个下载下来再安装了。
+安装好setuptools后就可以利用easy_install这个工具安装下面的python模块了，但我的电脑是虚拟机，配置太低了，所以基本无法安装，所以只好一个一个下载下来再安装了。
 
-    (3) pycrypto模块安装
+#### pycrypto模块安装
 
-    ```bash
-    wget https://pypi.python.org/packages/source/p/pycrypto/pycrypto-2.6.1.tar.gz
+```bash
+wget https://pypi.python.org/packages/source/p/pycrypto/pycrypto-2.6.1.tar.gz
 
-    tar xvzf pycrypto-2.6.1.tar.gz
+tar xvzf pycrypto-2.6.1.tar.gz
 
-    cd pycrypto-2.6.1
+cd pycrypto-2.6.1
 
-    python setup.py install
-    ```
+python setup.py install
+```
 
-    (4) PyYAML模块安装
+#### PyYAML模块安装
 
-    ```bash
-    wget http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz
+```bash
+wget http://pyyaml.org/download/libyaml/yaml-0.1.5.tar.gz
 
-    tar xvzf yaml-0.1.5.tar.gz
+tar xvzf yaml-0.1.5.tar.gz
 
-    cd yaml-0.1.5
+cd yaml-0.1.5
 
-    ./configure --prefix=/usr/local
+./configure --prefix=/usr/local
 
-    make --jobs=`grep processor/proc/cpuinfo | wc -l`
+make --jobs=`grep processor/proc/cpuinfo | wc -l`
 
-    make install
+make install
 
-    wget https://pypi.python.org/packages/source/P/PyYAML/PyYAML-3.11.tar.gz
+wget https://pypi.python.org/packages/source/P/PyYAML/PyYAML-3.11.tar.gz
 
-    tar xvzf PyYAML-3.11.tar.gz
+tar xvzf PyYAML-3.11.tar.gz
 
-    cd PyYAML-3.11
+cd PyYAML-3.11
 
-    python setup.py install
-    ```
+python setup.py install
+```
 
-    (5) Jinja2模块安装
+#### Jinja2模块安装
 
-    ```bash
-    wget https://pypi.python.org/packages/source/M/MarkupSafe/MarkupSafe-0.9.3.tar.gz
+```bash
+wget https://pypi.python.org/packages/source/M/MarkupSafe/MarkupSafe-0.9.3.tar.gz
 
-    tar xvzf MarkupSafe-0.9.3.tar.gz
+tar xvzf MarkupSafe-0.9.3.tar.gz
 
-    cd MarkupSafe-0.9.3
+cd MarkupSafe-0.9.3
 
-    python setup.py install
+python setup.py install
 
-    wget https://pypi.python.org/packages/source/J/Jinja2/Jinja2-2.7.3.tar.gz
+wget https://pypi.python.org/packages/source/J/Jinja2/Jinja2-2.7.3.tar.gz
 
-    tar xvzf Jinja2-2.7.3.tar.gz
+tar xvzf Jinja2-2.7.3.tar.gz
 
-    cd Jinja2-2.7.3
+cd Jinja2-2.7.3
 
-    python setup.py install
-    ```
+python setup.py install
+```
 
-    (6) paramiko模块安装
+#### paramiko模块安装
 
-    ```bash
-    wget https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.11.tar.gz
+```bash
+wget https://pypi.python.org/packages/source/e/ecdsa/ecdsa-0.11.tar.gz
 
-    tar xvzf ecdsa-0.11.tar.gz
+tar xvzf ecdsa-0.11.tar.gz
 
-    cd ecdsa-0.11
+cd ecdsa-0.11
 
-    python setup.py install
+python setup.py install
 
-    wget https://pypi.python.org/packages/source/p/paramiko/paramiko-1.15.1.tar.gz
+wget https://pypi.python.org/packages/source/p/paramiko/paramiko-1.15.1.tar.gz
 
-    tar xvzf paramiko-1.15.1.tar.gz
+tar xvzf paramiko-1.15.1.tar.gz
 
-    cd paramiko-1.15.1
+cd paramiko-1.15.1
 
-    python setup.py install
-    ```
+python setup.py install
+```
 
-    (7) simplejson模块安装
+#### simplejson模块安装
 
-    ```bash
+```bash
 
-    wget https://pypi.python.org/packages/source/s/simplejson/simplejson-3.6.5.tar.gz
+wget https://pypi.python.org/packages/source/s/simplejson/simplejson-3.6.5.tar.gz
 
-    tar xvzf simplejson-3.6.5.tar.gz
+tar xvzf simplejson-3.6.5.tar.gz
 
-    cd simplejson-3.6.5
+cd simplejson-3.6.5
 
-    python setup.py install
-    ```
+python setup.py install
+```
 
-    (8) ansible安装
+#### ansible安装
 
-    ```bash
-    wget https://github.com/ansible/ansible/archive/v1.7.2.tar.gz
+```bash
+wget https://github.com/ansible/ansible/archive/v1.7.2.tar.gz
 
-    tar xvzf ansible-1.7.2.tar.gz
+tar xvzf ansible-1.7.2.tar.gz
 
-    cd ansible-1.7.2
+cd ansible-1.7.2
 
-    python setup.py install
-    ```
+python setup.py install
+```
 
-    ansible 安装成功后我们就可以安装istio了，如下：
+ansible 安装成功后我们就可以安装istio了，如下：
 
-    ```bash
-    ansible-playbook main.yml
-    ```
+```bash
+ansible-playbook main.yml
+```
 
-    安装好后openshift就多出来一个分组istio-system
+安装好后openshift就多出来一个分组istio-system
 
-    ```bash
-    oc get pod -n istio-system
+```bash
+oc get pod -n istio-system
 
-    ```
+```
 
-    如图：
+如图：
 
-    ![istio-system](../images/operation-istio/istio-system.png)
+![istio-system](../images/operation-istio/istio-system.png)
 
 ### 使用源码安装istio
 
-    ```bash
-    wget https://github.com/istio/istio/releases/download/0.8.0/istio-0.8.0-linux.tar.gz
+```bash
+wget https://github.com/istio/istio/releases/download/0.8.0/istio-0.8.0-linux.tar.gz
 
-    tar -zxvf  istio-0.8.0-linux.tar.gz
+tar -zxvf  istio-0.8.0-linux.tar.gz
 
-    cd istio-0.8.0/install/kubernetes/
+cd istio-0.8.0/install/kubernetes/
 
-    oc create -f istio.yaml
-    ```
+oc create -f istio.yaml
+```
 
 ## Istio 注入到pod中
 
@@ -251,17 +251,17 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
 ### grafana
 
-    grafana主要的作用是监控到服务器的cpu 、内存、硬盘的各项指标。
+grafana主要的作用是监控到服务器的cpu 、内存、硬盘的各项指标。
 
-    ![istio-grafana](../images/operation-istio/istio-grafana.png)
+![istio-grafana](../images/operation-istio/istio-grafana.png)
 
 ### jaeger
 
-    jaeger 可以查看服务的调用情况调用时长。
+jaeger 可以查看服务的调用情况调用时长。
 
-    ![istio-jaeger](../images/operation-istio/istio-jaeger.png)
+![istio-jaeger](../images/operation-istio/istio-jaeger.png)
 
-    ![istio-jaeger](../images/operation-istio/istio-default-route.png)
+![istio-jaeger](../images/operation-istio/istio-default-route.png)
 
 ### servicegraph
 
@@ -278,3 +278,4 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 ```
 
 ![servicegraph](../images/operation-istio/istio-servicegraph-dotviz.png)
+
