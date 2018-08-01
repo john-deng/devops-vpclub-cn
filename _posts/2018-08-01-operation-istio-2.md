@@ -16,7 +16,10 @@ categories:
 
 # OpenShift 集成 Istio 服务网格
 
-![istio](/images/operation-istio/istio.png)
+作者：褚磊
+校对：邓冰寒
+
+![istio](/images/common/openshift-logo-small.png) ![istio](/images/operation-istio/istio.png)
 
 ## Istio 概述
 
@@ -256,7 +259,7 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
 grafana主要的作用是监控到服务器的cpu 、内存、硬盘的各项指标。
 
-![istio-grafana](/images/operation-istio/istio-grafana.png)
+![istio-grafana](/images/operation-istio/istio-grafana2.png)
 
 ### jaeger
 
