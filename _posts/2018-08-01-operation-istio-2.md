@@ -277,7 +277,7 @@ curl -I http://simple-order-command-demo-dev.app.vpclub.io
 
 grafana主要的作用是监控到服务的cpu 、内存、硬盘的各项指标。
 
-![istio-grafana](/images/operation-istio/istio-grafana-dashboard.png)
+![gf-dashboard](/images/operation-istio/istio-grafana-dashboard.png)
 
 我们调用部署好的服务来测试，
 
@@ -341,7 +341,7 @@ x-envoy-upstream-service-time: 6
 
 我们马上可以看到以上调用情况。
 
-![istio-grafana](/images/operation-istio/istio-grafana-dashboard-svc.png)
+![gf-dashboard-svc](/images/operation-istio/istio-grafana-dashboard-svc.png)
 
 ### jaeger
 
