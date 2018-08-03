@@ -133,6 +133,8 @@ nvm use 8.11.3
   * 6.14.3 (Currently using 64-bit executable)
 </code></pre>
 
+大功告成，接下来你可以自由切换node的版本了。
+
  [1]: https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip
  [2]: /images/h5-nvm-on-windows/install-step-2.png
  [3]: /images/h5-nvm-on-windows/install-step-3.png
