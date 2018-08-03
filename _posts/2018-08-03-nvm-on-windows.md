@@ -20,6 +20,8 @@ categories:
 
 作者：邓冰寒，宋登威
 
+![step-0](/images/common/nodejs-320.png)
+
 ## 准备工作
 
 所先确保你已经安装好git for windows，并卸载已有的nodejs版本
@@ -138,4 +140,4 @@ nvm use 8.11.3
  [1]: https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip
  [2]: /images/h5-nvm-on-windows/install-step-2.png
  [3]: /images/h5-nvm-on-windows/install-step-3.png
- [4]: /images/h5-nvm-on-windows/install-step-4.png
+ [4]: /images/h5-nvm-on-windows/install-step-4.jpg
