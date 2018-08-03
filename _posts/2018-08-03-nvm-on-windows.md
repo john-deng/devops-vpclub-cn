@@ -29,7 +29,7 @@ categories:
 注意执行以下命令设置git克隆后不改变文本换行符
 
 ```bash
-git config --global core.autocrlf false
+git config --global core.autocrlf input
 ```
 
 到github下载[mvn-windows安装包 nvm-setup.zip](https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip)
