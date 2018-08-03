@@ -37,11 +37,9 @@ categories:
 
 ![step-2][2]
 
-改变安装目录
+前面2步直接下一步，使用默认安装路径，下一步要修改链接路径为C:\nodejs 再下一步，安装
 
-![step-3][3]
-
-前面2步直接下一步，到把默认安装路径改成 C:\nodejs\nvm 下一步也要修改成路径成C:\nodejs 再下一步，安装
+`特别注意：安装路径和链接路径不能相同，否则安装不成功`
 
 ![step-4][4]
 
@@ -133,42 +131,6 @@ nvm use 8.11.3
 
 <pre><code class="language-bash">    8.11.3
   * 6.14.3 (Currently using 64-bit executable)
-</code></pre>
-
-### FQA (常见问题及解决办法)
-
-到目前为止，发现有的电脑会在nvm use之后不会创建软链接，这时候可以暂时在windows cmd命令提示符下手动创建软链接
-
-切换到node v6.14.3
-
-<pre><code class="language-cmd">del c:\nodejs\node.exe
-mklink c:\nodejs\node.exe C:\nodejs\nvm\v6.14.3\node.exe
-</code></pre>
-
-切换到node v8.11.3
-
-<pre><code class="language-cmd">del c:\nodejs\node.exe
-mklink c:\nodejs\node.exe C:\nodejs\nvm\v8.11.3\node.exe
-</code></pre>
-
-当然，上面命令较为麻烦，可创建bat文件到 c:\nodejs\nvmuse.bat, 把以下内容复制到 mvnuse.bat
-
-<pre><code class="language-bat">echo off
-
-set version=%1
-
-del c:\nodejs\node.exe
-mklink c:\nodejs\node.exe C:\nodejs\nvm\v%version%\node.exe
-</code></pre>
-
-然后在windows cmd提示符下面执行以下命令切换版本
-
-<pre><code class="language-cmd">nvmuse.bat 6.14.3
-</code></pre>
-
-或者
-
-<pre><code class="language-cmd">nvmuse.bat 8.11.3
 </code></pre>
 
  [1]: https://github.com/coreybutler/nvm-windows/releases/download/1.1.7/nvm-setup.zip
