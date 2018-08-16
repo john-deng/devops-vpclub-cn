@@ -2,6 +2,7 @@
 post_title: Go入门指南
 post_name: go-getting-started
 author: 邓冰寒
+post_date: 2018-08-16 12:48:00
 layout: post
 link: https://devops.vpclub.cn/go-getting-started/
 published: true
