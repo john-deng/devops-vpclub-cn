@@ -83,7 +83,7 @@ Markdown是一种轻量级的[标记语言]，它的优点很多，目前也被�
 
 ## Mardown 常用语法说明
 
-![logo](/images/general-how-to-write-doc/md-icon.png)
+![logo-markdown](/images/general-how-to-write-doc/md-icon-256.png)
 
 ### 标题
 
@@ -306,12 +306,12 @@ public class HelloWorldApplication {
 * **代码**
 
 ```markdown
-![markdown](/images/general-how-to-write-doc/markdown.png)
+![markdown](/images/general-how-to-write-doc/markdown-256.png)
 ```
 
 * **效果**
 
-![markdown](/images/general-how-to-write-doc/markdown.png)
+![markdown](/images/general-how-to-write-doc/markdown-256.png)
 
 ### 选项列表
 

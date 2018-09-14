@@ -1,14 +1,18 @@
 ---
+ID: 300
 post_title: 聊聊H5移动端适配方案
 post_name: h5-responsive-layout
-author: 盛闯
+author: 邓冰寒
+post_date: 2018-07-13 10:44:49
 layout: post
+link: >
+  https://devops.vpclub.cn/h5-responsive-layout/
 published: true
 tags:
   - h5
-  - web
   - layout
   - responsive
+  - web
 categories:
   - 前端
 ---
@@ -31,7 +35,7 @@ categories:
 ## 通过js设置根元素的font-size  
 目前我们公司基本都在用这套方案，直接上代码：  
 
-```
+```javascript
 //rem.js
 (function (document, window) {
 	    /**
@@ -56,15 +60,16 @@ categories:
 })(document, window);
 ```
 使用方法：
-> 1. 将以上文件引入到项目中
-> 2. 写css的时候用设计图的px尺寸/100。  
+
+1. 将以上文件引入到项目中
+2. 写css的时候用设计图的px尺寸/100。  
     这里是以设计稿为750x1334为例，例如设计稿中元素宽度为100，书写样式的时候就是`width: 1rem`。
-> 3. 当然也可以用postcss来做。
+3. 当然也可以用postcss来做。
 
 ## vm+rem+scss+postcss。
 这种方式同样是采用rem的方式，区别第一种是根元素`font-size`采用`vw`。
 
-```
+```javascript
 // rem.scss
 
 $v_design: 750;// 750x1334设计稿
@@ -92,19 +97,23 @@ body {
     margin: 0 auto;
 }
 ```
+
 使用方法：
-> 1. 引入`rem.scss`
-> 2. `npm i postcss-pxtorem -D`
-> 3. 修改`.postcssrc.js`文件，这样就可以愉快的用`px`啦。
-> ```javascript
->   module.exports = {
->      "plugins": {
->          "postcss-pxtorem": {
->                "rootValue": 75,
->                "propList": ["*"]   
->            }
->       }
->   }
+
+1. 引入`rem.scss`
+2. `npm i postcss-pxtorem -D`
+3. 修改`.postcssrc.js`文件，这样就可以愉快的用`px`啦。
+
+```javascript
+   module.exports = {
+      "plugins": {
+          "postcss-pxtorem": {
+                "rootValue": 75,
+                "propList": ["*"]
+            }
+       }
+   }
+```
 
 - 注意：不支持style中使用@import url()的方式。这种时候可以用定义的scss函数`rem()`  
 - 优点：只需要通过改变根元素大小的计算方式，就可以无缝过渡到另一种CSS单位
@@ -114,7 +123,7 @@ body {
  直接通过[postcss-px-to-viewport](https://github.com/evrone/postcss-px-to-viewport)将`px`转换`vw`。  
  使用方法：
  > 1. `npm i postcss-px-to-viewport -D`
- > 3. 修改`.postcssrc.js`文件，这样就可以愉快的用`px`啦。
+ > 2. 修改`.postcssrc.js`文件，这样就可以愉快的用`px`啦。
  > ```javascript
  >   module.exports = {
  >        "plugins": {
@@ -133,7 +142,8 @@ body {
 如果你不需要去管那种被程序员唾弃的，被时代抛弃的脑残机完全可以用这种方式。
 ## 改变meta标签
 还有一种是通过改变`<meta>`标签来适配，因为限制性比较多，例如引入第三方库、嵌入第三方页面是有问题的，所以这里就不多做介绍，也不推荐大家使用这种方法。
-```
+
+```html
 <!-- dpr = 1--> 
 `<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">`
 <!-- dpr = 2--> 
