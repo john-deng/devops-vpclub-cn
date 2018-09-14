@@ -13,8 +13,9 @@ categories:
   - 前端
 ---
 
-
 # 聊聊H5适配
+**作者：盛闯**
+
 关于移动端H5适配一直是个热门话题，尽管公司已经在用的那一套经过了市场的检验，但是现在vw、wh兼容性足够好了，所以我们可以开始使用更好的新适配方案了，接下来会列举三种适配方案，当然你也可以重组他们，个人推荐第三种，如果你是处女座，只能使用第三种。
 
 >1. 以下适配都基于.html文件中添加了 `<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">`
