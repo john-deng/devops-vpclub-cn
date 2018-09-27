@@ -1,17 +1,17 @@
 ---
 post_title: >
   Kubernetes CRD - 从代码生成到使用
-post_name: ks8-crd
+post_name: operation-ks8-crd
 author: 邓冰寒
 post_date: 2018-09-27 12:00:00
 layout: post
-link: https://devops.vpclub.cn/k8s-crd/
+link: https://devops.vpclub.cn/operation-k8s-crd/
 published: true
 tags:
   - CRD
   - k8s
 categories:
-  - 后端
+  - 运维
 ---
 
 # Kubernetes CRD - 从代码生成到使用
