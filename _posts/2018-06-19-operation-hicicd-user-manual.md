@@ -12,6 +12,7 @@ tags:
   - User Menual
 categories:
   - 运维
+  - 运维
 ---
 # hicicd应用部署操作手册
 
