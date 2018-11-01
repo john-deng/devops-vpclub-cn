@@ -1,7 +1,6 @@
 ---
 ID: 317
-post_title: >
-  CentOS 7 + Nginx 配置支持IPV6
+post_title: CentOS 7 + Nginx 配置支持IPV6
 post_name: operation-cnetos7-nginx-ipv6
 author: 邓冰寒
 post_date: 2018-07-30 11:13:33
@@ -12,6 +11,7 @@ published: true
 tags:
   - ipv6
 categories:
+  - 运维
   - 运维
 ---
 
