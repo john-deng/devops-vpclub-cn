@@ -15,6 +15,7 @@ tags:
   - Swarm
 categories:
   - 运维
+  - 运维
 ---
 
 # 小型项目的容器部署方案
