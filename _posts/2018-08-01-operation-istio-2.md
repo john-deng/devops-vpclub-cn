@@ -12,6 +12,7 @@ tags:
   - istio
 categories:
   - 运维
+  - 运维
 ---
 
 # OpenShift 集成 Istio 服务网格
