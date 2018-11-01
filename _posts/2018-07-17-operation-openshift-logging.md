@@ -14,6 +14,7 @@ tags:
   - 日志
 categories:
   - 运维
+  - 运维
 ---
 
 # 如何在OpenShift查看应用日志
