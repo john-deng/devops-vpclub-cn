@@ -1,19 +1,18 @@
 ---
 ID: 365
-post_title: 'mio应用部署操作手册'
+post_title: mio应用部署操作手册
 post_name: operation-mio
 author: 邓冰寒
 post_date: 2018-11-20 12:00:00
 layout: post
-link: >
-  https://devops.vpclub.cn/operation-mio/
+link: https://devops.vpclub.cn/operation-mio/
 published: true
 tags:
-  - mio
   - CI/CD
+  - mio
 categories:
   - 运维
-
+  - 运维
 ---
 
 ## 摘要
