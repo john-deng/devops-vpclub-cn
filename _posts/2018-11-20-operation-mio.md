@@ -1,18 +1,19 @@
 ---
 ID: 365
-post_title: mio应用部署操作手册
+post_title: 'mio应用部署操作手册'
 post_name: operation-mio
 author: 邓冰寒
 post_date: 2018-11-20 12:00:00
 layout: post
-link: https://devops.vpclub.cn/operation-mio/
+link: >
+  https://devops.vpclub.cn/operation-mio/
 published: true
 tags:
-  - CI/CD
   - mio
+  - CI/CD
 categories:
   - 运维
-  - 运维
+
 ---
 
 ## 摘要
@@ -21,12 +22,10 @@ categories:
 
 ### 安装
 
-```
-下载地址: [http://stage.vpclub.cn/file/hidevopsio/mio-cli/v1.0.0]
+[下载](http://stage.vpclub.cn/file/hidevopsio/mio-cli/)相应版本的客户端后，拷贝到env任意PATH路径中即可
 
-下载相应版本的客户端后，拷贝到env任意PATH路径中即可
-```
-### 参见
+
+### 子命令
 
 | 子命令       | 描述     | 示例       |
 |------------|----------|------------|
@@ -36,15 +35,12 @@ categories:
 | run | 启动 pipeline 任务 | mio run --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
 | logs | 查看 pipeline 任务日志 | mio logs --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
 
-
 ```
-一句话的使用说明
-客户端配置设置用[mio set]查看配置用[mio info]先登陆[mio login]才能使用[mio run]启动pipeline 任务,查看日志用[mio logs]
-不在项目路径下[mio run]和[mio logs]需要加参数。
+在项目路径下执行mio run和mio logs 可以自动推断app,project,sourcecode属性 直接执行mio run或mio logs即可
 ```
 
 
-### 名词解释:
+### 属性介绍:
 | 属性       | 描述     | 示例       |
 |------------|----------|------------|
 |project|集群中的namespace，openshift中的Projects| -p demo |
@@ -58,12 +54,20 @@ categories:
 ### 例子：
 
 以下例子分别用全称和简写展示
-```bash
-设置客户端server_url信息
 
+##### 设置客户端server_url信息
+http://100.100.100.100:8080 需换成真实URL
+
+```bash
 mio set --server=http://100.100.100.100:8080
+```
+
+```bash
 mio set -s http://100.100.100.100:8080
+```
+
 ---客户端输出---:
+```bash
 ______  ____________             _____
 ___  / / /__(_)__  /_______________  /_
 __  /_/ /__  /__  __ \  __ \  __ \  __/
@@ -75,11 +79,16 @@ _  __  / _  / _  /_/ / /_/ / /_/ / /_     Hiboot Application Framework
 ```
 
 
+
+##### 同时设置客户端token和name信息
 ```bash
-同时设置客户端token和name信息
 mio set --token=XXXXXX --name=zhangshan
+```
+```bash
 mio set -t XXXXXX -n zhangshan
+```
 ---客户端输出---:
+```bash
 ______  ____________             _____
 ___  / / /__(_)__  /_______________  /_
 __  /_/ /__  /__  __ \  __ \  __ \  __/
@@ -91,25 +100,28 @@ _  __  / _  / _  /_/ / /_/ / /_/ / /_     Hiboot Application Framework
 ```
 
 
-```bash
-查看客户端配置信息
 
+##### 查看客户端配置信息
+```bash
 mio info
+```
+```bash
 ---客户端输出---:
 ______  ____________             _____
 ___  / / /__(_)__  /_______________  /_
 __  /_/ /__  /__  __ \  __ \  __ \  __/
 _  __  / _  / _  /_/ / /_/ / /_/ / /_     Hiboot Application Framework
 /_/ /_/  /_/  /_.___/\____/\____/\__/     https://hidevops.io/hiboot
-
 /Users/wang/.mio/config :  {"Name":"","Token":"eyJpkx8PWpw*******","Server":"http://100.100.100.100:8080"}
 ```
 
 
+##### 登陆mio
+[此操作会更新Token信息，使用gitlab账号信息登陆]
 ```bash
-登陆mio[此操作会更新Token信息，使用gitlab账号信息登陆]
-
 mio login
+```
+```bash
 ---客户端输出---:
 ______  ____________             _____
 ___  / / /__(_)__  /_______________  /_
@@ -123,13 +135,19 @@ Password ********
 ```
 
 
-```
-启动 pipeline 任务
+##### 启动 pipeline 任务
 在项目代码路径下执行
+```bash
 mio run
+```
+
 不在项目代码路径下执行需要加参数
+```bash
 mio run --project=demo --app=hello-world --sourcecode=java
 mio run -p demo -a hello-world -s java
+```
+
+```bash
 ---客户端输出---:
 ______  ____________             _____
 ___  / / /__(_)__  /_______________  /_
@@ -144,14 +162,21 @@ source code:  java
 ```
 
 
-```
-启动 pipeline 任务 并实时输出Pipeline任务日志信息
+
+##### 启动 pipeline 任务 并实时输出Pipeline任务日志信息
 在项目代码路径下执行
+```bash
 mio run --watch
 mio run -w
+```
+
 不在项目代码路径下执行需要加参数
+```bash
 mio run --project=demo --app=hello-world --sourcecode=java --watch
 mio run -p demo -a hello-world -s java -w
+```
+
+```bash
 ---客户端输出---:
 ______  ____________             _____
 ___  / / /__(_)__  /_______________  /_
@@ -180,13 +205,18 @@ Downloaded: http://nexus.vpclub.cn/repository/maven-public/org/apache/m
 ```
 
 
-```
-查看 pipeline 任务日志
+
+##### 查看 pipeline 任务日志
 在项目代码路径下执行
+```bash
 mio logs
+```
 不在项目代码路径下执行需要加参数
+```bash
 mio logs --project=demo --app=hello-world --sourcecode=java
 mio logs -p demo -a hello-world -s java
+```
+```bash
 ---客户端输出---:
 ______  ____________             _____
 ___  / / /__(_)__  /_______________  /_
