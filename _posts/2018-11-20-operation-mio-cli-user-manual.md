@@ -20,16 +20,22 @@ categories:
 
 使用mio来管理 pipeline。
 
+### 安装
 
+```
+下载地址: [http://stage.vpclub.cn/file/hidevopsio/mio-cli/v1.0.0]
+
+下载相应版本的客户端后，拷贝到env任意PATH路径中即可
+```
 ### 参见
 
-| 命令       | 描述     | 示例       |
+| 子命令       | 描述     | 示例       |
 |------------|----------|------------|
-| mio info | 查看客户端连接配置信息 | mio info |
-| mio set | 设置客户端连接配置信息| mio set --name={name} --token={token} --server={server_url} |
-| mio login | 登陆客户端 | mio login |
-| mio run | 启动 pipeline 任务 | mio run --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
-| mio logs | 查看 pipeline 任务日志 | mio logs --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
+| info | 查看客户端连接配置信息 | mio info |
+| set | 设置客户端连接配置信息| mio set --name={name} --token={token} --server={server_url} |
+| login | 登陆客户端 | mio login |
+| run | 启动 pipeline 任务 | mio run --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
+| logs | 查看 pipeline 任务日志 | mio logs --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
 
 
 ```
@@ -154,9 +160,6 @@ __  /_/ /__  /__  __ \  __ \  __ \  __/
 _  __  / _  / _  /_/ / /_/ / /_/ / /_     Hiboot Application Framework
 /_/ /_/  /_/  /_.___/\____/\____/\__/     https://hidevops.io/hiboot
 
-[INFO] 2018/11/20 11:03 Resolving dependencies
-[INFO] 2018/11/20 11:03 Injecting dependencies
-[INFO] 2018/11/20 11:03 Injected dependencies
 app:  hello-world
 project:  demo
 source code:  java
@@ -205,6 +208,44 @@ Downloading: http://nexus.vpclub.cn/repository/maven-public/org/apache/maven/mav
 Downloaded: http://nexus.vpclub.cn/repository/maven-public/org/apache/maven/maven-model-builder/3.1.1/maven-model-builder-3.1.1.pom (3 KB at 105.5 KB/sec)
 Downloading: http://nexus.vpclub.cn/repository/maven-public/org/apache/maven/maven-aether-provider/3.2.1/maven-aether-provider-3.2.1.pom
 Downloaded: http://nexus.vpclub.cn/repository/maven-public/org/apache/m
+....
+[INFO] image [docker-registry-default.app.vpclub.io/demo/hello-world:112] start build:
+=======filename Dockerfile
+=======filename app.jar
+Step 1/9 : FROM docker.vpclub.cn/hidevopsio/java:8-jre-alpine
+Step 2/9 : ENV TZ Asia/Shanghai
+Removing intermediate container bbe2cd220d48
+Step 3/9 : ENV APP_OPTIONS -Xms128m -Xmx512m -Xss512k
+Removing intermediate container 543fa75cbecb
+Step 4/9 : ENV APP_OPTIONS -Xms128m -Xmx512m -Xss512k
+Removing intermediate container 9ea66006f4ac
+Step 5/9 : COPY app.jar /root
+Removing intermediate container ce03333a3e6a
+Step 6/9 : EXPOSE 8080
+Removing intermediate container f4bfa3d78d68
+Step 7/9 : EXPOSE 7575
+Removing intermediate container ae94478598a0
+Step 8/9 : RUN ls -l
+Removing intermediate container 3bfc2b932633
+Step 9/9 : ENTRYPOINT sh -c java -jar /root/app.jar $APP_OPTIONS
+Removing intermediate container 4cc3d3e88254
+Successfully built 57e68859d1c0
+[INFO] image [docker-registry-default.app.vpclub.io/demo/hello-world:112] start push:
+[INFO] 2018/11/20 04:54 image push
+status:The push refers to a repository [docker-registry-default.app.vpclub.io/demo/hello-world]
+status:Preparing,progressDetail:,id:69f1666a0d89
+status:Preparing,progressDetail:,id:44e3d4bd3ac6
+status:Preparing,progressDetail:,id:20dd87a4c2ab
+status:Preparing,progressDetail:,id:78075328e0da
+status:Preparing,progressDetail:,id:9f8566ee5135
+status:Layer already exists,progressDetail:,id:78075328e0da
+status:Layer already exists,progressDetail:,id:9f8566ee5135
+status:Layer already exists,progressDetail:,id:44e3d4bd3ac6
+status:Layer already exists,progressDetail:,id:20dd87a4c2ab
+status:Pushed,progressDetail:,id:69f1666a0d89
+status:112: digest: sha256:712f30225f49fd8ed9191ab505acb802835ab07cacb3e485c4a94db4380d73d4 size: 1370
+{"progressDetail":{},"aux":{"Tag":"112","Digest":"sha256:712f30225f49fd8ed9191ab505acb802835ab07cacb3e485c4a94db4380d73d4","Size":1370}}
+
 ```
 
 
