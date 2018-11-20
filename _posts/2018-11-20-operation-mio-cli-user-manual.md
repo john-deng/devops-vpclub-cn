@@ -210,8 +210,6 @@ Downloading: http://nexus.vpclub.cn/repository/maven-public/org/apache/maven/mav
 Downloaded: http://nexus.vpclub.cn/repository/maven-public/org/apache/m
 ....
 [INFO] image [docker-registry-default.app.vpclub.io/demo/hello-world:112] start build:
-=======filename Dockerfile
-=======filename app.jar
 Step 1/9 : FROM docker.vpclub.cn/hidevopsio/java:8-jre-alpine
 Step 2/9 : ENV TZ Asia/Shanghai
 Removing intermediate container bbe2cd220d48
