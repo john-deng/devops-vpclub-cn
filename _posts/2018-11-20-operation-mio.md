@@ -21,7 +21,7 @@ categories:
 
 ### 安装
 
-[下载](http://stage.vpclub.cn/file/hidevopsio/mio-cli/)相应版本的客户端后，拷贝到env任意PATH路径中即可
+[点击下载](http://stage.vpclub.cn/file/hidevopsio/mio-cli/)相应版本的客户端后，拷贝到env任意PATH路径中即可
 
 
 ### 子命令
@@ -31,8 +31,8 @@ categories:
 | info | 查看客户端连接配置信息 | mio info |
 | set | 设置客户端连接配置信息| mio set --name={name} --token={token} --server={server_url} |
 | login | 登陆客户端 | mio login |
-| run | 启动 pipeline 任务 | mio run --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
-| logs | 查看 pipeline 任务日志 | mio logs --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} |
+| run | 启动 pipeline 任务 | mio run --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} --profile={test;dev;prod} --version={v1,v2}|
+| logs | 查看 pipeline 任务日志 | mio logs --project={namspaces} --app={app_name} --sourcecode={java;nodejs;golang} --profile={test;dev;prod} --version={v1,v2}|
 
 ```
 在项目路径下执行mio run和mio logs 可以自动推断app,project,sourcecode属性 直接执行mio run或mio logs即可
@@ -48,6 +48,8 @@ categories:
 |token|Pipeline任务启动的验证信息，通过[mio login]命令自动写入配置文件| -t XXXXX|
 |server|服务端连接地址|-s http://1.1.1.1:80|
 |watch|是否实时显示Pipeline任务日志信息|-w |
+|profile|指定发版环境(可选参数默认值为 dev)|-P test |
+|version|指定版本信息(可选参数默认值为 v1)|-V v2|
 
 
 ### 例子：
@@ -140,10 +142,22 @@ Password ********
 mio run
 ```
 
+在项目代码路径下启动pipeline并且自定义[发版环境]与[版本信息]
+```bash
+mio run --profile=test --version=v2
+mio run -P test -V v2
+```
+
 不在项目代码路径下执行需要加参数
 ```bash
 mio run --project=demo --app=hello-world --sourcecode=java
 mio run -p demo -a hello-world -s java
+```
+
+不在项目代码路径下启动pipeline并且自定义[发版环境]与[版本信息]
+```bash
+mio run --project=demo --app=hello-world --sourcecode=java --profile=test --version=v2
+mio run -p demo -a hello-world -s java -P test -V v2
 ```
 
 ```bash
